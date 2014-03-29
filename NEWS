@@ -1,4 +1,5 @@
 epinemo 0.0.1
 ==========
 
-* Forked from package 'capm', to facilitate package building
+* Mirrored from package 'capm', to facilitate package building
+* Functions for PageRank included

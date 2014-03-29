@@ -1,7 +1,7 @@
 library(devtools)
 
 # Development workflow
-setwd('~/pacotes/')
+setwd('~/Dropbox/projetos/pacote/')
 load_all('epinemo')
 document('epinemo')
 install('epinemo')

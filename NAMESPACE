@@ -1,2 +1,4 @@
-export(Calculate2StageSampleSize)
+export(PageRank)
+export(PageRank_H)
+export(Rnhm)
 import(Matrix)

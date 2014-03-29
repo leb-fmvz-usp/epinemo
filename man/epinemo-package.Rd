@@ -1,0 +1,24 @@
+\docType{package}
+\name{epinemo-package}
+\alias{epinemo-package}
+\title{The epinemo Package}
+\description{
+EPIdemiological NEtwork MOdels. Provides functions for
+quantitative analysis in networks. Further information can
+be found in the URL given below.
+}
+\details{
+\tabular{ll}{ Package: \tab epinemo\cr Type: \tab
+Package\cr Version: \tab 0.0.1\cr Date: \tab 2014-03-18\cr
+Depends: \tab R (>= 3.0.2)\cr Imports: \tab Matrix\cr
+License: \tab GPL (>= 2)\cr LazyLoad: \tab yes\cr URL: \tab
+\url{http://leb.fmvz.usp.br}\cr Author: \tab Jose H H
+Grisi-Filho \email{grisi@vps.fmvz.usp.br}, Marcos Amaku
+\email{amaku@vps.fmvz.usp.br}, Raul Ossada
+\email{raul@vps.fmvz.usp.br}\cr Maintainer: \tab Jose H H
+Grisi-Filho \email{grisi@vps.fmvz.usp.br}\cr Contributors:
+\tab Fernando Ferreira \email{fernando@vps.fmvz.usp.br},
+Fernando S Marques, \email{fernandosm@vps.fmvz.usp.br} }
+}
+\keyword{package}
+

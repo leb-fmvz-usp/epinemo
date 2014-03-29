@@ -2,7 +2,7 @@
 #' @description This function creates a sparse row-normalized hyperlink matrix
 #' @param A network adjacency \code{\link{matrix}} 
 #' @return row-normalized hyperlink matrix
-#' @details É uma função complicada...
+#' @details Complicated function... see the book!
 #' 
 #' @references Livro do PageRank
 #' 
@@ -12,15 +12,9 @@
 #' # Calculates rnhm
 #' Rnhm(A)
 
-# 
-# Requires packages 'Matrix'
-# Input:
-#   A = adjacency matrix
-# Output:
-#   H = row-normalized hyperlink matrix
-
 Rnhm <- function(A)
 {
+  require(Matrix)
   Srow  <- rowSums(A)
   n  <- dim(A)[1]
   H  <- matrix(0,n,n)

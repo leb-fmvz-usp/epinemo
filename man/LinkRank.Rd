@@ -1,0 +1,32 @@
+\name{LinkRank}
+\alias{LinkRank}
+\title{Linkrank Matrix}
+\usage{
+LinkRank(G, pr)
+}
+\arguments{
+  \item{G}{Google Matrix. Output of
+  \code{\link{GoogleMatrix}} function}
+
+  \item{pr}{PageRank vector. Output of
+  \code{\link{PageRank}} function}
+}
+\value{
+LinkRank Matrix
+}
+\description{
+Calculates the LinkRank Matrix, according to Kim (2010)
+}
+\details{
+Complicated function... see the paper!
+}
+\examples{
+# Calculates LinkRank Matrix
+LinkRank(G,pr)
+}
+\references{
+Kim (2010)
+
+\url{http://github.com/leb-fmvz-usp.github/epinemo}
+}
+

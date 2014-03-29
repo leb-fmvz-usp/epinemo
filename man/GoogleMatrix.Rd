@@ -1,0 +1,32 @@
+\name{GoogleMatrix}
+\alias{GoogleMatrix}
+\title{This function creates the Google Matrix}
+\usage{
+GoogleMatrix(A, alpha = 0.85)
+}
+\arguments{
+  \item{A}{network adjacency \code{\link{matrix}}}
+
+  \item{alpha}{scaling parameter in PageRank model. It must
+  be \code{\link{numeric}} between 0 and 1 inclusive.
+  Default = 0.85.}
+}
+\value{
+Google \code{\link{matrix}}.
+}
+\description{
+Calculates the PageRank for a network matrix
+}
+\details{
+This function is very simple.
+}
+\examples{
+# Calculates Google Matrix
+Google.matrix(A)
+}
+\references{
+Livro do PageRank
+
+\url{http://github.com/leb-fmvz-usp.github/epinemo}
+}
+

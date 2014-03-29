@@ -15,7 +15,7 @@ This function creates a sparse row-normalized hyperlink
 matrix
 }
 \details{
-É uma função complicada...
+Complicated function... see the book!
 }
 \examples{
 # Calculates rnhm

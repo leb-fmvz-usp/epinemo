@@ -1,0 +1,29 @@
+\name{Rnhm}
+\alias{Rnhm}
+\title{row-normalized hyperlink matrix}
+\usage{
+Rnhm(A)
+}
+\arguments{
+  \item{A}{network adjacency \code{\link{matrix}}}
+}
+\value{
+row-normalized hyperlink matrix
+}
+\description{
+This function creates a sparse row-normalized hyperlink
+matrix
+}
+\details{
+É uma função complicada...
+}
+\examples{
+# Calculates rnhm
+Rnhm(A)
+}
+\references{
+Livro do PageRank
+
+\url{http://github.com/leb-fmvz-usp.github/epinemo}
+}
+

@@ -20,11 +20,10 @@ build_win()
 
 # Update version in:
 #   DESCRIPTION
-#   capm-package
+#   epinemo-package
 #   README.md
 #   NEWS
 #   Home web page
-#   Web documentation in all languages
 
 #####################
 ## release('epinemo') ##

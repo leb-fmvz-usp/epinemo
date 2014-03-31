@@ -1,6 +1,8 @@
 export(GoogleMatrix)
 export(LinkRank)
 export(LinkRankMod)
+export(LinkRankModMatrix)
+export(LinkRankOptimalPartition)
 export(PageRank)
 export(PageRank_H)
 export(Rnhm)

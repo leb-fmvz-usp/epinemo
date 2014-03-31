@@ -1,0 +1,60 @@
+\name{LinkRankOptimalPartition}
+\alias{LinkRankOptimalPartition}
+\title{Linkrank Modularity Optimization}
+\usage{
+LinkRankOptimalPartition(qlrM, A, c, Tc = 1, minTc = 1e-10, cool = 0.995,
+  max_itry, max_heat, max_rej, plots = F, location = getwd())
+}
+\arguments{
+  \item{qlrmM}{LinkRank Modularirty Matrix. Output of
+  \code{\link{LinkRankModMatrix}} function}
+
+  \item{A}{Alternatively, the network adjacency matrix can
+  be provided.}
+
+  \item{c}{Initial parition vector. Default to c = 1:n}
+
+  \item{Tc}{Initial temperature}
+
+  \item{minTc}{Minimal temperature}
+
+  \item{cool}{System cooling factor}
+
+  \item{max_itry}{Number of iterations in each temperature.
+  Default to "n^2"}
+
+  \item{max_heat}{Maximal consecutive heat changes in each
+  temperature. Default to "n".}
+
+  \item{max_rej}{Maximal consecutive rejection changes in
+  each temperature. Default to "n".}
+
+  \item{plots}{Logical. If TRUE plots the progres of the
+  algorithm. Requires network adjacency matrix and
+  "statnet" package. Default to FALSE}
+
+  \item{location}{Directory to save the plots described
+  above.}
+}
+\value{
+Numeric vector, with the optimal partition found.
+}
+\description{
+Computes the optimal partition of a network, based on
+LinkRank Modularity
+}
+\details{
+Complicated function... see the paper! Uses Simulated
+Annealing (see reference) Only test simple movements
+between groups, doesn't test group movements.
+}
+\examples{
+# Calculates the optimal partition of a given network
+LinkRankOptimalPartition(A)
+}
+\references{
+Kim (2010), (Kirkpatrick, Gelatt e Vecchi, 1983)
+
+\url{http://github.com/leb-fmvz-usp.github/epinemo}
+}
+

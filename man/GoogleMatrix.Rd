@@ -25,7 +25,7 @@ This function is very simple.
 Google.matrix(A)
 }
 \references{
-Livro do PageRank
+Page et al. (1999); Langville e Meyer (2006)
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

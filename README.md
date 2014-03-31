@@ -18,4 +18,4 @@ To install the unstable version, run `install_github(repo='epinemo', username='l
 
 If you find any error or have suggestions to improve or include functionality to `epinemo`, we want to know it. Please get in touch so we can better understand your needs.
 
-[Web page of the package](http://leb-fmvz-usp.github.io/epinemo/)  
+[Web page of the package](https://github.com/leb-fmvz-usp/epinemo)  

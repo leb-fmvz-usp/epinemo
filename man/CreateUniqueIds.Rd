@@ -8,13 +8,13 @@ CreateUniqueIds(data, from, to)
   \item{data}{Edgelist of a network.
   \code{\link{data.frame}}}
 
-  \item{from}{\code{\link{numeric}} \code{\link{vector}},
-  with the column(s) used to characterize the origin node
-  of each link}
-
-  \item{to}{\code{\link{numeric}} \code{\link{vector}},
-  with the column(s) used to characterize each the destiny
+  \item{from}{\code{\link{character}} \code{\link{vector}},
+  indicate the column(s) used to characterize the origin
   node of each link}
+
+  \item{to}{\code{\link{character}} \code{\link{vector}},
+  indicate the column(s) used to characterize each the
+  destiny node of each link}
 }
 \value{
 Edgelist with new ID's, ranging from 1:n

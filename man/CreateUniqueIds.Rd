@@ -8,11 +8,11 @@ CreateUniqueIds(data, from, to)
   \item{data}{Edgelist of a network.
   \code{\link{data.frame}}}
 
-  \item{from}{\code{\link{character}} \code{\link{vector}},
+  \item{from}{\code{\link{numeric}} \code{\link{vector}},
   with the column(s) used to characterize the origin node
   of each link}
 
-  \item{to}{\code{\link{character}} \code{\link{vector}},
+  \item{to}{\code{\link{numeric}} \code{\link{vector}},
   with the column(s) used to characterize each the destiny
   node of each link}
 }
@@ -28,7 +28,7 @@ Used to be slow, now is very fast!
 }
 \examples{
 # New id's
-database <- data.frame(database,CreateUniqueId(database))
+new_database <- CreateUniqueId(database)
 }
 \references{
 None. \url{http://github.com/leb-fmvz-usp.github/epinemo}

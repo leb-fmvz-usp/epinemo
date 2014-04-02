@@ -1,8 +1,8 @@
 #' Create Unique Identifiers
 #' @description Create unique identifiers in a network presented in edgelist form
 #' @param data Edgelist of a network. \code{\link{data.frame}}
-#' @param from \code{\link{character}} \code{\link{vector}}, with the column(s) used to characterize the origin node of each link
-#' @param to \code{\link{character}} \code{\link{vector}}, with the column(s) used to characterize each the destiny node of each link
+#' @param from \code{\link{numeric}} \code{\link{vector}}, with the column(s) used to characterize the origin node of each link
+#' @param to \code{\link{numeric}} \code{\link{vector}}, with the column(s) used to characterize each the destiny node of each link
 #' @return Edgelist with new ID's, ranging from 1:n
 #' @details Used to be slow, now is very fast!
 #' @references None.
@@ -10,7 +10,7 @@
 #' @export
 #' @examples 
 #' # New id's
-#' database <- data.frame(database,CreateUniqueId(database))
+#' new_database <- CreateUniqueId(database)
 CreateUniqueIds <- function(data,from,to)
 {
   #Test if identifiers are numeric

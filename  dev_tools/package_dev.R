@@ -7,7 +7,7 @@ load_all('epinemo')
 document('epinemo')
 install('epinemo')
 library(epinemo)
-setwd('~/pacotes/epinemo')
+#setwd('~/pacotes/epinemo')
 
 # News preview
 show_news('epinemo')

@@ -3,3 +3,9 @@ epinemo 0.0.1
 
 * Mirrored from package 'capm', to facilitate package building
 * Functions for PageRank included
+
+epinemo 0.0.2
+==========
+
+* Function CreateUniqueIds now accept character vectors
+

@@ -14,7 +14,7 @@ Current version offers functions that allow users to implement the following wor
 
 The current workflow is mainly focused on animal movement records but also applies to other networks. 
 
-To install the unstable version, run `install_github(repo='epinemo', username='leb-fmvz-usp', auth_user='lebvps', password='qwerty12345')` in (ideally) RStudio. `devtools` package must be previously loaded.
+To install the unstable version, run `install_github(repo='leb-fmvz-usp/epinemo', auth_token = '7055b1fb20190fb0411d0f730d81faccd5968f0e')` in (ideally) RStudio. `devtools` package must be previously loaded.
 
 If you find any error or have suggestions to improve or include functionality to `epinemo`, we want to know it. Please get in touch so we can better understand your needs.
 

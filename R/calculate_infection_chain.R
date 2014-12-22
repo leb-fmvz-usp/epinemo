@@ -1,6 +1,6 @@
 #' It calculates infection chain.
 #' @description Parallel function to calculate outgoing and ingoing infection chain.
-#' @param Network information data \code{\link{data.frame}} with: node ID, origin node, destiny node, and the time in which the link was established.
+#' @param Data \code{\link{data.frame}} with network information : node ID, origin node, destiny node, and the time in which the link was established.
 #' @param from \code{\link{character}}, indicates the column used to characterize the origin node of each link.
 #' @param to \code{\link{character}}, indicates the column used to characterize the destiny node of each link.
 #' @param Time \code{\link{character}}, indicates the column used to characterize the time in which the link was established.
@@ -12,8 +12,8 @@
 #' @return \code{\link{data.frame}}. The first column, \code{*$infection.chain}, is the infection chain value. The second column, \code{*$selected.nodes}, are the selected nodes.
 #' @references 
 #' [1] K Buttner, J Krieter, and I Traulsen. “Characterization of Contact Structures for the Spread of Infectious Diseases in a Pork Supply Chain in Northern Germany by Dynamic Network Analysis of Yearly and Monthly Networks.” In: Transboundary and emerging diseases 2000 (May 2013), pp. 1–12.
-#' [2] C Dub ́e, C Ribble, D Kelton, et al. “Comparing network analysis measures to determine potential epidemic size of highly contagious exotic diseases in fragmented monthly networks of dairy cattle movements in Ontario, Canada.” In: Transboundary and emerging diseases 55.9-10 (Dec. 2008), pp. 382–392.
-#' [3] C Dub ́e, C Ribble, D Kelton, et al. “A review of network analysis terminology and its application to foot-and-mouth disease modelling and policy development.” In: Transboundary and emerging diseases 56.3 (Apr. 2009), pp. 73–85.
+#' [2] C Dube, C Ribble, D Kelton, et al. “Comparing network analysis measures to determine potential epidemic size of highly contagious exotic diseases in fragmented monthly networks of dairy cattle movements in Ontario, Canada.” In: Transboundary and emerging diseases 55.9-10 (Dec. 2008), pp. 382–392.
+#' [3] C Dube, C Ribble, D Kelton, et al. “A review of network analysis terminology and its application to foot-and-mouth disease modelling and policy development.” In: Transboundary and emerging diseases 56.3 (Apr. 2009), pp. 73–85.
 #' [4] Jenny Frossling, Anna Ohlson, Camilla Bj ̈orkman, et al. “Application of network analysis parameters in risk-based surveillance - Examples based on cattle trade data and bovine infections in Sweden.” In:  Preventive veterinary medicine 105.3 (July 2012), pp. 202–208. doi: 10.1016/j.prevetmed.2011.12.011.
 #' [5] Maria Noremark, Nina Ha kansson, Susanna Sternberg Lewerin, et al. “Network analysis of cattle and pig movements in Sweden: measures relevant for disease control and risk based surveillance.” In: Preventive veterinary medicine 99.2-4 (2011), pp. 78–90. doi: 10.1016/j.prevetmed.2010.12.009.
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}

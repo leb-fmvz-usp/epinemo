@@ -1,6 +1,6 @@
 #' It calculates infection chain.
 #' @description Parallel function to calculate outgoing and ingoing infection chain.
-#' @param Network information data \code{\link{data.frame}} with: node ID, origin node, destiny node, and the time in which the link was established.
+#' @param Data \code{\link{data.frame}} with network information : node ID, origin node, destiny node, and the time in which the link was established.
 #' @param from \code{\link{character}}, indicates the column used to characterize the origin node of each link.
 #' @param to \code{\link{character}}, indicates the column used to characterize the destiny node of each link.
 #' @param Time \code{\link{character}}, indicates the column used to characterize the time in which the link was established.

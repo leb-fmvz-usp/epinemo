@@ -9,3 +9,7 @@ epinemo 0.0.2
 
 * Function CreateUniqueIds now accept character vectors
 
+epinemo 0.0.3
+==========
+
+* CalculateInfectionChain:parallel function to calculate infection chain.

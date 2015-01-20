@@ -1,22 +1,25 @@
-epinemo 0.0.1
-==========
-
-* Mirrored from package 'capm', to facilitate package building
-* Functions for PageRank included
-
-epinemo 0.0.2
-==========
-
-* Function CreateUniqueIds now accept character vectors
-
-epinemo 0.0.3
-==========
-
-* CalculateInfectionChain:parallel function to calculate infection chain.
-
 epinemo 0.0.4
 ==========
 
 * CalculateInfectionChain:parallel function to calculate infection chain:
    + adds new functionality: 'both', it calculates ingoing and outgoing infection chain.
    + it creates new ID, internally.
+
+
+epinemo 0.0.3
+==========
+
+* CalculateInfectionChain:parallel function to calculate infection chain.
+
+
+epinemo 0.0.2
+==========
+
+* Function CreateUniqueIds now accept character vectors
+
+
+epinemo 0.0.1
+==========
+
+* Mirrored from package 'capm', to facilitate package building
+* Functions for PageRank included

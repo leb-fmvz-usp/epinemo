@@ -13,3 +13,10 @@ epinemo 0.0.3
 ==========
 
 * CalculateInfectionChain:parallel function to calculate infection chain.
+
+epinemo 0.0.4
+==========
+
+* CalculateInfectionChain:parallel function to calculate infection chain:
+   + adds new functionality: 'both', it calculates ingoing and outgoing infection chain.
+   + it creates new ID, internally.

@@ -127,7 +127,10 @@ CalculateInfectionChain <- function(Data, from, to, Time, selected.nodes,
     
   } else if(type == 'ingoing'){
     
-    names(Data)[c(1,2)] <- c(to,from)
+    a <- which(names(Data) == to)
+    b <- which(names(Data) == from)
+    names(Data)[a] <- from
+    names(Data)[b] <- to
     mov.time <- sort(unique(Data[,Time]), decreasing = T)
     
     infection.chain <- foreach(n=1:length(selected.nodes[,'selected.nodes']),.verbose=FALSE, .combine = 'rbind',

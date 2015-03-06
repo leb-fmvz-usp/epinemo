@@ -2,9 +2,11 @@ Package: epinemo
 Type: Package
 Title: Epidemiologic Network Models
 Depends:
-    R (>= 3.0.2)
+    R (>= 3.0.2),
+    foreach
 Imports:
-    Matrix
+    Matrix,
+    doSNOW
 Description: Provides functions for
 License: GPL (>= 2)
 LazyLoad: yes

@@ -59,13 +59,13 @@ CalculateContactChain <- function (Data, from, to, Time)
   #check
   stopifnot(class(Data[,Time]) == "Date")
   #Create new IDs
-  data <- Data[, c(from, to, Time)]
-  data <- CreateUniqueIds(data = data, from = from, to = to)
+  Data <- Data[, c(from, to, Time)]
+  Data <- CreateUniqueIds(data = Data, from = from, to = to)
   #Dimensions of Matrix
-  dimensions <- rep( max(data$correspondence$new_id), 2)
+  dimensions <- rep( max(Data$correspondence$new_id), 2)
   
   #Break movements by Date
-  mov.list <- split(data$movements, data$movements[, Time])
+  mov.list <- split(Data$movements, Data$movements[, Time])
   
   #Sparse Matrix for each Date
   net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'originID'], j = x[, 'destinyID'], x=1, dims= dimensions ))
@@ -76,13 +76,9 @@ CalculateContactChain <- function (Data, from, to, Time)
     matrix.ccc <- matrix.ccc + net.array[[i]] + matrix.ccc %*% net.array[[i]]
     matrix.ccc[ matrix.ccc>0 ] <- 1
   }
-  data <- data.frame(ID = data$correspondence$old_id)
-  data$ingoing <- colSums(matrix.ccc)
-  data$outgoing <- rowSums(matrix.ccc)
-  return(data)
   diag(matrix.ccc) <- 0
-  data <- data.frame(id = data$correspondence$old_id)
-  data$ingoing <- colSums(matrix.ccc)
-  data$outgoing <- rowSums(matrix.ccc)
-  return(data)
+  Data <- data.frame(id = Data$correspondence$old_id)
+  Data$ingoing <- colSums(matrix.ccc)
+  Data$outgoing <- rowSums(matrix.ccc)
+  return(Data)
 }

@@ -74,8 +74,7 @@ CalculateContactChain <- function (Data, from, to, Time)
   for (i in 1:length(net.array))
   {
     matrix.ccc <- matrix.ccc + net.array[[i]] + matrix.ccc %*% net.array[[i]]
-    matrix.ccc <- matrix.ccc > 0
-    matrix.ccc <- matrix.ccc*1
+    matrix.ccc <- (matrix.ccc > 0) * 1
   }
   diag(matrix.ccc) <- 0
   Data <- data.frame(id = Data$correspondence$old_id)

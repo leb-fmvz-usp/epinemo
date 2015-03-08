@@ -15,6 +15,11 @@
 #' @param Time \code{\link{character}}, indicates the column used to characterize
 #'        the time in which the link was established.
 #' 
+#' @param simultaneous \code{\link{logical}}, wether movements within 
+#'        the same time stamp (same day) are simultaneous (\code{\link{TRUE}})
+#'        with no indirect contacts within each day or 
+#'        continuous (\code{\link{FALSE}}) and indirect contacts between movements
+#'         from the same day are possible.
 #' 
 #' @details This is a function that calculates the contact chain of a dynamic
 #'          network.
@@ -53,7 +58,7 @@
 #' # call contact chain function
 #' chain <- CalculateContactChain(Data, from, to, Time)
 #'                                                    
-CalculateContactChain <- function (Data, from, to, Time)
+CalculateContactChain <- function (Data, from, to, Time, simultaneous=T)
 {
   require(Matrix)
   #check
@@ -68,13 +73,36 @@ CalculateContactChain <- function (Data, from, to, Time)
   mov.list <- split(Data$movements, Data$movements[, Time])
   
   #Sparse Matrix for each Date
-  net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'originID'], j = x[, 'destinyID'], x=1, dims= dimensions ))
+  net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'originID'], j = x[, 'destinyID'], dims= dimensions ))
   matrix.ccc <- Matrix(0, nc=dimensions[1], nr=dimensions[2], sparse=T)
   matrix.ccc <- as(matrix.ccc, "dgCMatrix")
-  for (i in 1:length(net.array))
+  if (simultaneous)
   {
-    matrix.ccc <- matrix.ccc + net.array[[i]] + matrix.ccc %*% net.array[[i]]
-    matrix.ccc <- (matrix.ccc > 0) * 1
+    for (i in 1:length(net.array)) #for each day
+    {
+      matrix.ccc <- matrix.ccc + net.array[[i]] + matrix.ccc %*% net.array[[i]]
+      matrix.ccc <- (matrix.ccc > 0) * 1      
+    }
+  } else
+  {
+    for (i in 1:length(net.array)) #for each day
+    {
+      previous.chain <- day.chain <- indirect <- net.array[[i]] %*% net.array[[i]]
+      if (sum(indirect) != 0)
+      {
+        repeat
+        {
+          indirect <- indirect %*% net.array[[i]] #possibly new indirect connections
+          day.chain <- day.chain + indirect
+          day.chain <- (day.chain>0)*1
+          if ( identical(day.chain, previous.chain)) break() #no new connections made
+          previous.chain <- day.chain
+        }
+      }
+      day.chain <- net.array[[i]] + day.chain
+      matrix.ccc <- matrix.ccc + day.chain + matrix.ccc %*% day.chain
+      matrix.ccc <- (matrix.ccc > 0) * 1
+    }
   }
   diag(matrix.ccc) <- 0
   Data <- data.frame(id = Data$correspondence$old_id)

@@ -4,7 +4,7 @@
 \alias{CalculateContactChain}
 \title{Calculates contact chain.}
 \usage{
-CalculateContactChain(Data, from, to, Time)
+CalculateContactChain(Data, from, to, Time, simultaneous = T)
 }
 \arguments{
 \item{Data}{\code{\link{data.frame}} with network information : node ID, origin
@@ -18,6 +18,12 @@ CalculateContactChain(Data, from, to, Time)
 
 \item{Time}{\code{\link{character}}, indicates the column used to characterize
        the time in which the link was established.}
+
+\item{simultaneous}{\code{\link{logical}}, wether movements within
+       the same time stamp (same day) are simultaneous (\code{\link{TRUE}})
+       with no indirect contacts within each day or
+       continuous (\code{\link{FALSE}}) and indirect contacts between movements
+        from the same day are possible.}
 }
 \value{
 \code{\link{data.frame}}. The first column,

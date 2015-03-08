@@ -139,7 +139,7 @@ CalculateInfectionChain <- function(Data, from, to, Time, selected.nodes,
   }
   
   #### Parallel call ####
-  if(number.of.cores == NULL) number.of.cores <- parallel::detectCores()
+  if(missing(number.of.cores)) number.of.cores <- parallel::detectCores()
   cl <- parallel::makeCluster(number.of.cores, type = "SOCK")
   doSNOW::registerDoSNOW(cl)
   

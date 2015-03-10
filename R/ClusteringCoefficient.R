@@ -40,7 +40,7 @@ ClusteringCoefficient <- function(A, directed=T)
     clustering.out <- triangles.out / possible.triangles.out
     clustering.in[ is.nan(clustering.in)] <- NA
     clustering.out[ is.nan(clustering.out)] <- NA
-    return(data.frame(clusterin.in, clustering.out))
+    return(data.frame(clustering.in, clustering.out))
   } else
   {
     A <- A + t(A)

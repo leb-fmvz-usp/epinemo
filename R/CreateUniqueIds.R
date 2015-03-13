@@ -3,7 +3,9 @@
 #' @param data Edgelist of a network. \code{\link{data.frame}}
 #' @param from \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the origin node of each link
 #' @param to \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize each the destiny node of each link
-#' @return Edgelist with new ID's, ranging from 1:n
+#' @return \code{\link{list}} containing 2 elements: a \code{\link{data.frame}}
+#'          with old and new IDs for each node; and the original data set with
+#'          the new IDs, ranging from 1:n
 #' @details Used to be slow, now is very fast!
 #' @references None.
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}

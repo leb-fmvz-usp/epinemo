@@ -1,3 +1,8 @@
+epinemo 0.0.5
+==========
+* CalculateContactChain: function to calculate contact chain very fast
+* ClusteringCoefficient: function to calculate the directed and undirected clustering coefficients
+
 epinemo 0.0.4
 ==========
 

@@ -2,6 +2,7 @@
 
 export(CalculateContactChain)
 export(CalculateInfectionChain)
+export(ClusteringCoefficient)
 export(CreateUniqueIds)
 export(GoogleMatrix)
 export(LinkRank)

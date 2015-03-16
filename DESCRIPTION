@@ -12,12 +12,10 @@ License: GPL (>= 2)
 LazyLoad: yes
 URL: https://github.com/leb-fmvz-usp/epinemo
 Authors@R: c(person(given='Jose Henrique', family='H Grisi Filho',
-    email='grisi@vps.fmvz.usp.br', role=c("aut", "cre")),person(given='Marcos',
-    family='Amaku', email='amaku@vps.fmvz.usp.br', role=c("aut",
-    "cre")),person(given='Raul', family='Ossada', email='raul@vps.fmvz.usp.br',
-    role=c("aut", "cre")),person(given='Fernando',
-    family='Ferreira',email='fernando@vps.fmvz.usp.br', role="ctb"),
-    person(given='Fernando', family='S Marques',
-    email='fernandosm@vps.fmvz.usp.br', role=c("ctb")))
+    email='grisi@vps.fmvz.usp.br', role=c("aut", "cre")),
+    person(given='Marcos', family='Amaku', email='amaku@vps.fmvz.usp.br', role=c("aut")),
+    person(given='Raul', family='Ossada', email='raul@vps.fmvz.usp.br', role=c("aut")),
+    person(given='Fernando',family='Ferreira',email='fernando@vps.fmvz.usp.br', role="ctb"),
+    person(given='Fernando', family='S Marques', email='fernandosm@vps.fmvz.usp.br', role=c("aut")))
 Version: 0.0.4
 Date: 2014-03-19

@@ -14,7 +14,9 @@ CreateUniqueIds(data, from, to)
 \item{to}{\code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize each the destiny node of each link}
 }
 \value{
-Edgelist with new ID's, ranging from 1:n
+\code{\link{list}} containing 2 elements: a \code{\link{data.frame}}
+         with old and new IDs for each node; and the original data set with
+         the new IDs, ranging from 1:n
 }
 \description{
 Create unique identifiers in a network presented in edgelist form

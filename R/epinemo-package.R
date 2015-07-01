@@ -19,5 +19,5 @@
 #' @docType package
 #' @title The epinemo Package
 #' @keywords package
-#' @import Matrix
+#' @import Matrix ggplot2
 NULL

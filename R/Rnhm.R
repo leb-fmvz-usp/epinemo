@@ -17,7 +17,7 @@ Rnhm <- function(A)
   require(Matrix)
   Srow  <- rowSums(A)
   n  <- dim(A)[1]
-  H  <- matrix(0,n,n)
+  H  <- Matrix(data = 0, nrow = n, ncol = n, sparse = T)
   for (i in 1:n)
   {
     if (Srow[i] != 0)

@@ -15,13 +15,11 @@
 Rnhm <- function(A)
 {
   require(Matrix)
-  Srow  <- rowSums(A)
-  n  <- dim(A)[1]
+  n  <- nrow(A)
   H  <- Matrix(data = 0, nrow = n, ncol = n, sparse = T)
-  for (i in 1:n)
-  {
-    if (Srow[i] != 0)
-      H[i,] <- A[i,]/Srow[i]
-  }
+  Srow  <- rowSums(A)
+  zerorows <- Srow == 0
+  Srow[zerorows] <- 1
+  H <- A / Srow
   return(H)
 }

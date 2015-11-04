@@ -49,7 +49,7 @@ chain <- CalculateContactChain(Data, from, to, Time)
 [1] K Buttner, J Krieter, and I Traulsen. "Characterization of Contact Structures
     for the Spread of Infectious Diseases in a Pork Supply Chain in Northern
     Germany by Dynamic Network Analysis of Yearly and Monthly Networks." In:
-    Transboundary and emerging diseases 2000 (May 2013), pp. 1–12.
+    Transboundary and emerging diseases 2000 (May 2013), pp. 1 – 12.
 [2] C Dube, C Ribble, D Kelton, et al. “Comparing network analysis measures to
     determine potential epidemic size of highly contagious exotic diseases in
     fragmented monthly networks of dairy cattle movements in Ontario, Canada.”

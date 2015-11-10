@@ -9,14 +9,14 @@ CreateUniqueIds(data, from, to)
 \arguments{
 \item{data}{Edgelist of a network. \code{\link{data.frame}}}
 
-\item{from}{\code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the origin node of each link}
+\item{from}{\code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the source node of each link}
 
-\item{to}{\code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize each the destiny node of each link}
+\item{to}{\code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize each the target node of each link}
 }
 \value{
 \code{\link{list}} containing 2 elements: a \code{\link{data.frame}}
-         with old and new IDs for each node; and the original data set with
-         the new IDs, ranging from 1:n
+         with database and network IDs for each node; and the original dataset with
+         the new IDs, ranging from 1:n (columns "From" and "To")
 }
 \description{
 Create unique identifiers in a network presented in edgelist form

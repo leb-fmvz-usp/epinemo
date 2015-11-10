@@ -24,6 +24,8 @@ CreateUniqueIds <- function(data,from,to)
   {
     stop('Function only works with one identifier for source and one identifier for target')
   }
+  if (sum(is.na(c(data[, from], data[, to]))) > 0)
+    stop('NA found in one of the identifiers columns')
   #Test if identifiers are numeric. If not, convert to character
   if ( !( class(data[, from]) %in% c('integer','numeric') & class(data[, to]) %in% c('integer','numeric') ))
   {

@@ -73,7 +73,7 @@ CalculateContactChain <- function (Data, from, to, Time, simultaneous=T)
   mov.list <- split(Data$movements, Data$movements[, Time])
   
   #Sparse Matrix for each Date
-  net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'originID'], j = x[, 'destinyID'], dims= dimensions ))
+  net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'From'], j = x[, 'To'], dims= dimensions ))
   matrix.ccc <- Matrix(0, nc=dimensions[1], nr=dimensions[2], sparse=T)
   matrix.ccc <- as(matrix.ccc, "dgCMatrix")
   if (simultaneous)

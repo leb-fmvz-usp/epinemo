@@ -1,51 +1,21 @@
-#' @title Makes simulations in a network
-#' 
-#' @description Function to simulate disease spread in a network
-#' 
-#' @param M_adjc Adjacency \code{\link{matrix}} 
-#' 
-#' @param pspreadc \code{\link{numeric}}, indicates the probability of spread
-#' 
-#' @param tSim \code{\link{numeric}}, indicates the simulation time
-#' 
-#' @param tI \code{\link{vector}}, indicates the infected nodes at t = 0
-#' 
-#' @param tImin \code{\link{numeric}}, indicates the minimum duration of infection
-#' 
-#' @param tImax \code{\link{numeric}}, indicates the maximum duration of infection
-#' 
-#' @param tR \code{\link{vector}}, indicates the recovered nodes at t = 0
-#' 
-#' @param tRmin \code{\link{numeric}}, indicates the minimum duration of recovery
-#' 
-#' @param tRmax \code{\link{numeric}}, indicates the maximum duration of recovery
-#' 
-#' @details SIRS model
-#' 
-#' @return \code{\link{list}} with two elements. The first, M_Sim_I, M_Sim_R
-#'         \code{*$M_Sim_I}, with one column for each time step and one line for each node. Cells indicate the node's state
-#'         (infected or not) in a given time step.
-#'         \code{*$M_Sim_R}, with one column for each time step and one line for each node. Cells indicate the node's state
-#'         (recovered or not) in a given time step.
-#' 
-#' @references 
-#' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
-#' @export
-#' @examples 
-#' 
-#' simulationSIRS( matriz, pspreadc = probabilidade, tSim = tsim, tI = tI, tImin = timin, tImax = timax, tR = tR, tRmin = trmin, tRmax = trmax)
-#' 
+# simulationSIRS.R
+# Original version: Raul Ossada
+# Version: 03/Nov/2012
+# Changes: 
+# Marcos Amaku 11/Nov/2015 - including control
 
+# Function to run the simulation of disease spread on a network
 
-simulationSIRS <- function(M_adjc, pspreadc, tSim, tI, tImin, tImax,  tR, tRmin, tRmax)
+#####################################################################################
+
+simulationSIRS <- function(M_adj, pspread, tSim, tI, tImin, tImax,  tR, tRmin, tRmax, tcontrol)
 {
     # Builds the simulation matrix where each row represents a vertex and each column represents a time step of the simulation...
     # ... for the 'infected' vertices
-    M_Sim_I = matrix(data=NA, nrow=nrow(M_adjc), ncol=(tSim+1) );
+    M_Sim_I = matrix(data=NA, nrow=nrow(M_adj), ncol=(tSim+1) );
 
     # ... for the 'recovered' vertices
-    M_Sim_R = matrix(data=NA, nrow=nrow(M_adjc), ncol=(tSim+1) );
+    M_Sim_R = matrix(data=NA, nrow=nrow(M_adj), ncol=(tSim+1) );
 
     # For each time step...
     for( i in 1:tSim )
@@ -62,16 +32,19 @@ simulationSIRS <- function(M_adjc, pspreadc, tSim, tI, tImin, tImax,  tR, tRmin,
         S = as.numeric(!I&!R);
 
         # Multiply the 'infected' vector by the adjacency matrix, generating the potential infection vector
-        Pvectorc = I %*% M_adjc;
+        Pvector = I %*% M_adj;
 
         # Vector with the probability of each vertex getting infected
-        Pvertexc = 1 - (1-pspreadc)^Pvectorc;
+        Pvertex = 1 - (1-pspread)^Pvector;
                 
         # Generating a vector with random numbers based on a uniform distribution [0,1]
-        Prandc = runif(n=length(M_adjc[1,]), min=0, max=1);
+        Prand = runif(n=length(M_adj[1,]), min=0, max=1);
 
         # If Prand(i) <= Pvertex(i), the vertex becames 'infected'
-        Pinfectionc = as.numeric(Prandc<=Pvertexc);
+        Pinfection = as.numeric(Prand<=Pvertex);
+        
+        # Vertices under a control strategy may not be infected
+        Pinfection = Pinfection*!(tcontrol);
 
         # Creating the new 'infected' vector: S=(0,1) AND Pinfection=(0,1)
         Inew = as.numeric(S & (Pinfectionc) );
@@ -121,7 +94,8 @@ simulationSIRS <- function(M_adjc, pspreadc, tSim, tI, tImin, tImax,  tR, tRmin,
         tI = tInew + aux_tI;
 
         # Merge the new 'recovered' vertices with the older ones
-        tR = tRnew + aux_tR;
+        # Nodes under a control strategy are also included
+        tR = tRnew + aux_tR + tcontrol;
 
     }
     # Inputs the results of the last time step of the simulation, in the simulation matrix

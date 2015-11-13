@@ -42,8 +42,8 @@ CalculateFP <- function(A)
   Abin <- 1*(A!=0)    
 
   # Indegree, Outdegree and Degree
-  kin <- colSums(Abin) 
-  kout <- rowSums(Abin) 
+  kin <- Matrix::colSums(Abin) 
+  kout <- Matrix::rowSums(Abin) 
   k <- kin + kout
 
   # Mean <k> and variance

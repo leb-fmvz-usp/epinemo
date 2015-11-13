@@ -1,3 +1,26 @@
+#' @title Function to run the simulation of disease spread on a network
+#' 
+#' @description Function to run the simulation of disease spread on a network
+#' 
+#' @param A an adjacency \code{\link{matrix}}
+#' 
+#' @details Function to run the simulation of disease spread on a network
+#' 
+#' @return \code{\link{list}}. The first element, a
+#'         \code{\link{matrix}} of Infected, and the second element, a
+#'         \code{\link{matrix}} of Recovered.
+#' 
+#' @references 
+#' 
+#' 
+#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+#' @export
+#' @examples 
+#' # Loading data from....
+#' 
+#' # call function
+#' 
+#'                                                    
 # simulationSIRS.R
 # Original version: Raul Ossada
 # Version: 03/Nov/2012

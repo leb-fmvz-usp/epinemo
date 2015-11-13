@@ -70,7 +70,7 @@ simulationSIRS <- function(M_adj, pspread, tSim, tI, tImin, tImax,  tR, tRmin, t
         Pinfection = Pinfection*!(tcontrol);
 
         # Creating the new 'infected' vector: S=(0,1) AND Pinfection=(0,1)
-        Inew = as.numeric(S & (Pinfectionc) );
+        Inew = as.numeric(S & (Pinfection) );
 
 	  # If a vertex is about to be 'recovered', mark it as a new 'recovered' vertex
         Rnew = rep( 0, length(R) );

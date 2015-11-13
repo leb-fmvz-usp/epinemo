@@ -17,7 +17,7 @@ Rnhm <- function(A)
   require(Matrix)
   n  <- nrow(A)
   H  <- Matrix(data = 0, nrow = n, ncol = n, sparse = T)
-  Srow  <- rowSums(A)
+  Srow  <- Matrix::rowSums(A)
   zerorows <- Srow == 0
   Srow[zerorows] <- 1
   H <- A / Srow

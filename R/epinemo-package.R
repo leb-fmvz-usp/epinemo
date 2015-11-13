@@ -3,10 +3,10 @@
 #' \tabular{ll}{
 #' Package: \tab epinemo\cr
 #' Type: \tab Package\cr
-#' Version: \tab 0.0.1\cr
+#' Version: \tab 0.0.6\cr
 #' Date: \tab 2014-03-18\cr
 #' Depends: \tab R (>= 3.0.2)\cr foreach
-#' Imports: \tab Matrix\cr ggplot2 \cr doSNOW
+#' Imports: \tab Matrix\cr ggplot2\cr doSNOW
 #' License: \tab GPL (>= 2)\cr
 #' LazyLoad: \tab yes\cr
 #' URL: \tab \url{http://leb.fmvz.usp.br}\cr
@@ -19,5 +19,5 @@
 #' @docType package
 #' @title The epinemo Package
 #' @keywords package
-
+#' @import Matrix ggplot2 foreach doSNOW
 NULL

@@ -1,3 +1,7 @@
+epinemo 0.0.6
+==========
+* CalculateFP: function to calculate Frienship Paradox metrics
+
 epinemo 0.0.5
 ==========
 * CalculateContactChain: function to calculate contact chain very fast

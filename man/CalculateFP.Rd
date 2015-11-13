@@ -34,7 +34,7 @@ CalculateFP(A)
 \references{
 [1] Feld, S.L., 1991.
     Why Your Friends Have More Friends than You Do.
-    Am. J. Sociol. 96, 1464???1477.
+    Am. J. Sociol. 96, 1464–1477.
 
 [2] Amaku, M., Cipullo, R.I., Grisi-Filho, J.H.H., Marques, F.S., Ossada, R., 2014.
     The friendship paradox in scale-free networks.

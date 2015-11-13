@@ -37,6 +37,7 @@
 
 CalculateFP <- function(A)
 {
+  require(Matrix)
   # Unweighted adjacency matrix (element=1 if there is a link)
   Abin <- 1*(A!=0)    
 

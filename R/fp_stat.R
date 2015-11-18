@@ -44,7 +44,8 @@ CalculateFP <- function(A)
   # Indegree, Outdegree and Degree
   kin <- colSums(Abin) 
   kout <- rowSums(Abin) 
-  k <- kin + kout
+  matriz_vizinhos_nao_direcionada <- ( (Abin + t(Abin)) > 0) * 1
+  k <- rowSums(matriz_vizinhos_nao_direcionada)
 
   # Mean <k> and variance
   kmean <- c(mean(kin),mean(kout),mean(k))

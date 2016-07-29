@@ -21,7 +21,7 @@ LinkRankMod <- function(L,pr,c)
   for (i in 1:length(lc))
   {
     ca <- c==lc[i]
-    if (sum(ca) == 1) break()
+    if (sum(ca) == 1) next()
     LA <- L[ca,ca]
     diag(LA) <- 0
     pra <- pr[ca]

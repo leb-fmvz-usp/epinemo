@@ -31,4 +31,3 @@ Function to run the simulation of disease spread on a network
 \references{
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

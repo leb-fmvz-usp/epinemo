@@ -35,4 +35,3 @@ cc <- ClusteringCoefficient(A)
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

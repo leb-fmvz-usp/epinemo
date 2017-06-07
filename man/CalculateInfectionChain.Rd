@@ -78,4 +78,3 @@ ingoing.infection.chain <- CalculateInfectionChain(Data, from, to, Time,
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

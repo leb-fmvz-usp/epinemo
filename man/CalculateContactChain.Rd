@@ -69,4 +69,3 @@ chain <- CalculateContactChain(Data, from, to, Time)
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

@@ -1,9 +1,13 @@
 library(devtools)
 
 # Development workflow
-setwd('~/Dropbox/projetos/pacote/')
-#setwd('C:/Users/ze/Dropbox/projetos/pacote/')
+#define o diretorio de trabalho
+
+# setwd('~/Dropbox/projetos/pacote/')
+setwd('C:/Users/ze/Dropbox/projetos/pacote/')
 #setwd('~/pacote/')
+
+#comandos para preparar o pacote
 load_all('epinemo')
 document('epinemo')
 install('epinemo')

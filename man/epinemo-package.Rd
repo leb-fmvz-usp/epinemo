@@ -24,4 +24,3 @@ Contributors: \tab Fernando Ferreira \email{fernando@vps.fmvz.usp.br}, Fernando 
 }
 }
 \keyword{package}
-

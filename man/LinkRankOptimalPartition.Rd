@@ -50,4 +50,3 @@ Kim (2010), (Kirkpatrick, Gelatt e Vecchi, 1983)
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

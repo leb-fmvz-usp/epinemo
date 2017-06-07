@@ -29,4 +29,3 @@ Kim (2010)
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

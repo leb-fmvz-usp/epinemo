@@ -35,4 +35,3 @@ pareto(A1)
 \references{
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }
-

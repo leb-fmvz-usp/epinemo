@@ -5,12 +5,13 @@
 #' @param from \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the source node (origin) of each edge
 #' @param to \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the target node (destination) of each edge
 #' @details This function creates two columns that can serve as unique identifiers. This IDs are in the range of 1:(number of nodes in the network). This is useful to create adjacency matrices when an unique identifier is composed of large numbers.
-#' @return \code{\link{list}} containing 2 elements: 
+#' @return a \code{\link{list}} containing the following components: 
 #' 
-#' a \code{\link{data.frame}} named "correspondence", giving for each node its original database identifier and the network identifier created; and 
+#' \describe{
+#' \item{correspondence}{a \code{\link{data.frame}}, giving for each node its original database identifier (database.id) and the new unique identifier (network.id) created; and }
 #'  
-#' a \code{\link{data.frame}} named "movements", which is the original dataset plus two new columns (columns "From" and "To"), with the new unique identifiers of origin and destination
-#' 
+#' \item{movements}{a \code{\link{data.frame}}, which is the original dataset plus two new columns (columns "From" and "To"), with the new unique identifiers of origin and destination}
+#' }
 #' 
 #' @export
 #' @examples 

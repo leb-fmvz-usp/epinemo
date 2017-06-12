@@ -1,10 +1,10 @@
-#' @title Calculations for the friendship paradox
+#' @title Calculate parameters related to the friendship paradox
 #' 
 #' @description Function to calculate friendship paradox metrics
 #' 
 #' @param A an adjacency \code{\link{matrix}}
 #' 
-#' @details This is a function that calculates the friendship paradox metrics
+#' @details Function to calculate friendship paradox metrics
 #' 
 #' @return \code{\link{list}}. The first vector,
 #'         \code{$degree}, indicates the type of degree calculated,
@@ -16,13 +16,13 @@
 #'         mean degree.
 #' 
 #' @references 
-#' [1] Feld, S.L., 1991. 
+#' [1] Feld SL (1991). 
 #'     Why Your Friends Have More Friends than You Do. 
-#'     Am. J. Sociol. 96, 1464–1477.
+#'     American Journal of Sociology 96, 1464–1477.
 #'     
-#' [2] Amaku, M., Cipullo, R.I., Grisi-Filho, J.H.H., Marques, F.S., Ossada, R., 2014. 
-#'     The friendship paradox in scale-free networks. 
-#'     Appl. Math. Sci. 8, 9. doi:10.12988/ams.2014.4288
+#' [2] Amaku M, Cipullo RI, Grisi-Filho JHH, Marques FS, Ossada R (2014). 
+#'     The Friendship Paradox in Scale-Free Networks. 
+#'     Applied Mathematical Sciences, 8 (37), 1837-1845. doi:10.12988/ams.2014.4288
 #' 
 #' 
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}
@@ -35,7 +35,7 @@
 #'                                                    
 
 
-CalculateFP <- function(A)
+friendshipParadox <- function(A)
 {
   require(Matrix)
   # Unweighted adjacency matrix (element=1 if there is a link)

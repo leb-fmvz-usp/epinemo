@@ -8,9 +8,9 @@
 #' @return a \code{\link{list}} containing the following components: 
 #' 
 #' \describe{
-#' \item{correspondence}{a \code{\link{data.frame}}, giving for each node its original database identifier (database.id) and the new unique identifier (network.id) created; and }
+#' \item{correspondence}{a \code{\link{data.frame}}, giving for each node its original database identifier (column named database.id) and the new unique identifier (column named network.id) created; and }
 #'  
-#' \item{movements}{a \code{\link{data.frame}}, which is the original dataset plus two new columns (columns "From" and "To"), with the new unique identifiers of origin and destination}
+#' \item{movements}{a \code{\link{data.frame}}, which is the original dataset plus two new columns (columns "From" and "To") with the new unique identifiers of origin and destination}
 #' }
 #' 
 #' @export

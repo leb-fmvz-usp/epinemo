@@ -23,9 +23,9 @@ and total degree (\code{k}).}
 Calculate parameters related to the friendship paradox
 }
 \details{
-This function calculates friendship paradox metrics, that is, the mean degree (\code{kmean}),
-the mean degree of friends (\code{kff}), the ratio between \code{kff} and \code{kmean} 
-(\code{ratio}), the variance of the degree distribution (\code{variance}) and the difference 
+This function calculates the following friendship paradox metrics: mean degree (\code{kmean}),
+mean degree of friends (\code{kff}), ratio between \code{kff} and \code{kmean} 
+(\code{ratio}), variance of the degree distribution (\code{variance}) and difference 
 between the mean degree of friends and the mean degree (\code{difference}).
 }
 \examples{

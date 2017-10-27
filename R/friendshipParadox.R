@@ -1,43 +1,62 @@
-#' @title Calculate parameters related to the friendship paradox
+#' @title Friendship paradox metrics
 #' 
-#' @description Function to calculate friendship paradox metrics
+#' @description Calculate parameters related to the friendship paradox
 #' 
 #' @param A an adjacency \code{\link{matrix}}
 #' 
-#' @details Function to calculate friendship paradox metrics
+#' @details This function calculates friendship paradox metrics, that is, the mean degree (\code{kmean}),
+#' the mean degree of friends (\code{kff}), the ratio between \code{kff} and \code{kmean} 
+#' (\code{ratio}), the variance of the degree distribution (\code{variance}) and the difference 
+#' between the mean degree of friends and the mean degree (\code{difference}).
 #' 
-#' @return \code{\link{list}}. The first vector,
-#'         \code{$degree}, indicates the type of degree calculated,
-#'         \code{$kmean}, mean degree,
-#'         \code{$kff}, mean number of friends of friends,
-#'         \code{ratio}, ratio between kff and kmean,
-#'         \code{variance}, the variance of degree distribution,
-#'         \code{difference}, the difference between the mean degree of friends and the 
-#'         mean degree.
+#' 
+#' @return A list of 
+#' \item{degree}{the type of degree calculated: indegree (\code{kin}), outdegree (\code{kout}) 
+#' and total degree (\code{k}).}
+#' \item{kmean}{the mean number of friends (degree).}
+#' \item{kff}{the mean number of friends of friends (degree of friends).}
+#' \item{ratio}{the ratio between \code{kff} and \code{kmean}.}
+#' \item{variance}{the variance of degree distribution.}
+#' \item{difference}{the difference between \code{kff} and \code{kmean}.}
+#'
 #' 
 #' @references 
-#' [1] Feld SL (1991). 
-#'     Why Your Friends Have More Friends than You Do. 
-#'     American Journal of Sociology 96, 1464–1477.
+#' Feld SL (1991). 
+#' Why Your Friends Have More Friends than You Do. 
+#' American Journal of Sociology 96, 1464-1477.
 #'     
-#' [2] Amaku M, Cipullo RI, Grisi-Filho JHH, Marques FS, Ossada R (2014). 
-#'     The Friendship Paradox in Scale-Free Networks. 
-#'     Applied Mathematical Sciences, 8 (37), 1837-1845. doi:10.12988/ams.2014.4288
+#' Amaku M, Cipullo RI, Grisi-Filho JHH, Marques FS, Ossada R (2014). 
+#' The Friendship Paradox in Scale-Free Networks. 
+#' Applied Mathematical Sciences, 8 (37), 1837-1845. doi:10.12988/ams.2014.4288
 #' 
+#' Amaku M, Grisi-Filho JHH, Negreiros RL, Dias RA, Ferreira F, Ferreira Neto JS,
+#' Cipullo RI, Marques FS, Ossada R (2015). 
+#' Infectious disease surveillance in animal movement networks: 
+#' An approach based on the friendship paradox
+#' Preventive Veterinary Medicine, 121, 306-313. doi:10.1016/j.prevetmed.2015.08.002
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+#' Amaku M, Grisi-Filho JHH (2015). The friendship paradox as a strategy for scenarios 
+#' with incomplete network data. Physics of Life Reviews, 15, 39-40. 
+#' doi:10.1016/j.plrev.2015.07.006
+#' 
+#'     
+#' 
 #' @export
 #' @examples 
-#' # Loading data from....
+#' require(Matrix)
 #' 
-#' # call function
-#' CalculateFP(A)
+#' # Generate an arbitrary 10 by 10 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(10 * 10, 1, 0.2), ncol = 10, nrow = 10)
+#' diag(A) <- 0
+#' 
+#' # Call function
+#' friendshipParadox(A)
 #'                                                    
 
 
 friendshipParadox <- function(A)
 {
-  require(Matrix)
   # Unweighted adjacency matrix (element=1 if there is a link)
   Abin <- 1*(A!=0)    
 

@@ -51,11 +51,11 @@ Applied Mathematical Sciences, 8 (37), 1837-1845. doi:10.12988/ams.2014.4288
 
 Amaku M, Grisi-Filho JHH, Negreiros RL, Dias RA, Ferreira F, Ferreira Neto JS,
 Cipullo RI, Marques FS, Ossada R (2015). 
-Infectious disease surveillance in animal movement networks: 
-An approach based on the friendship paradox
+Infectious Disease Surveillance in Animal Movement Networks: 
+An Approach Based on the Friendship Paradox
 Preventive Veterinary Medicine, 121, 306-313. doi:10.1016/j.prevetmed.2015.08.002
 
-Amaku M, Grisi-Filho JHH (2015). The friendship paradox as a strategy for scenarios 
-with incomplete network data. Physics of Life Reviews, 15, 39-40. 
+Amaku M, Grisi-Filho JHH (2015). The Friendship Paradox as a Strategy for Scenarios 
+with Incomplete Network Data. Physics of Life Reviews, 15, 39-40. 
 doi:10.1016/j.plrev.2015.07.006
 }

@@ -1,35 +1,54 @@
-#' @title Makes a graph with Pareto's Law
+#' @title Graph to check the 80-20 rule (Pareto principle)
 #' 
-#' @description Function to make a graph with Pareto's Law
+#' @description Make a graph of the percentage of more connected nodes
+#' as a function of the percentage of the total (weighted) indegree and outdegree
 #' 
-#' @param A1 Adjacency \code{\link{matrix}} 
-#' @param xlabel \code{\link{character}} with x-axis label
-#' @param ylabel \code{\link{character}} with y-axis label
-#' @param legin \code{\link{character}} with legend for K_in
-#' @param legin \code{\link{character}} with legend for K_out
+#' @param A An adjacency \code{\link{matrix}}. 
+#' @param xlabel The text for the x-axis label.
+#' @param ylabel The text for the y-axis label.
+#' @param legin The text for the legend of the indegree.
+#' @param legin The text for the legend of the outdegree.
 #' 
-#' @details Graph with Pareto's Law
+#' @details This function sorts in descreasing order 
+#' the indegree and outdegree of the nodes of a netowrk.
+#' Then the function calculates the percentage of more connected nodes 
+#' and the corresponding percentage of the total indegree and outdegree.
+#' The indegree and outdegree can be weighted or not, 
+#' depending on the adjacency matrix provided by the user.
+#'   
 #' 
-#' @return \code{\link{graph}} with Pareto's Law
+#' @return A graph of the percentage of more connected nodes
+#' as a function of the percentage of the total (weighted) indegree and outdegree
+#' for the user to check if the 80-20 rule (Pareto principle) 
+#' applies to the analyzed network.
+#' 
 #' 
 #' @references 
+#' Negreiros RL, Grisi-Filho JHH,  Dias RA, Ferreira F, Ferreira Neto JS, 
+#' Ossada R, Amaku M. 
+#' Analysis of the cattle trade network in the state of Mato Grosso, Brazil.
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+#' 
 #' @export
 #' @examples 
+#' # Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+#' diag(A) <- 0
 #' 
-#' pareto(A1)
+#' # Call function 
+#' pareto(A)
 #' 
 
-pareto <- function(A1,xlabel="More connected nodes (%)",
-                       ylabel="% of total",legin="in",legout="out")
+pareto <- function(A, xlabel = "More connected nodes (%)",
+                       ylabel = "% of total", legin = "in", legout = "out")
 {
   # Loading library ggplot2:
   require(ggplot2)
   
   # Calculating indegree and outdegree
-  kwin <- colSums(A1)
-  kwout <- rowSums(A1)
+  kwin <- colSums(A)
+  kwout <- rowSums(A)
   
   # Sorting in decreasing order
   skin <- sort(kwin,decreasing=TRUE)

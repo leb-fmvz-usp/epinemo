@@ -2,36 +2,52 @@
 % Please edit documentation in R/pareto.R
 \name{pareto}
 \alias{pareto}
-\title{Makes a graph with Pareto's Law}
+\title{Graph to check the 80-20 rule (Pareto principle)}
 \usage{
-pareto(A1, xlabel = "More connected nodes (\%)", ylabel = "\% of total",
+pareto(A, xlabel = "More connected nodes (\%)", ylabel = "\% of total",
   legin = "in", legout = "out")
 }
 \arguments{
-\item{A1}{Adjacency \code{\link{matrix}}}
+\item{A}{An adjacency \code{\link{matrix}}.}
 
-\item{xlabel}{\code{\link{character}} with x-axis label}
+\item{xlabel}{The text for the x-axis label.}
 
-\item{ylabel}{\code{\link{character}} with y-axis label}
+\item{ylabel}{The text for the y-axis label.}
 
-\item{legin}{\code{\link{character}} with legend for K_in}
+\item{legin}{The text for the legend of the indegree.}
 
-\item{legin}{\code{\link{character}} with legend for K_out}
+\item{legin}{The text for the legend of the outdegree.}
 }
 \value{
-\code{\link{graph}} with Pareto's Law
+A graph of the percentage of more connected nodes
+as a function of the percentage of the total (weighted) indegree and outdegree
+for the user to check if the 80-20 rule (Pareto principle) 
+applies to the analyzed network.
 }
 \description{
-Function to make a graph with Pareto's Law
+Make a graph of the percentage of more connected nodes
+as a function of the percentage of the total (weighted) indegree and outdegree
 }
 \details{
-Graph with Pareto's Law
+This function sorts in descreasing order 
+the indegree and outdegree of the nodes of a netowrk.
+Then the function calculates the percentage of more connected nodes 
+and the corresponding percentage of the total indegree and outdegree.
+The indegree and outdegree can be weighted or not, 
+depending on the adjacency matrix provided by the user.
 }
 \examples{
+# Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+# Remove loops
+A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+diag(A) <- 0
 
-pareto(A1)
+# Call function 
+pareto(A)
 
 }
 \references{
-\url{http://github.com/leb-fmvz-usp.github/epinemo}
+Negreiros RL, Grisi-Filho JHH,  Dias RA, Ferreira F, Ferreira Neto JS, 
+Ossada R, Amaku M. 
+Analysis of the cattle trade network in the state of Mato Grosso, Brazil.
 }

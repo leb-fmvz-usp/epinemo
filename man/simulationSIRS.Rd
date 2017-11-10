@@ -2,24 +2,47 @@
 % Please edit documentation in R/simulationSIRS.R
 \name{simulationSIRS}
 \alias{simulationSIRS}
-\title{Function to run the simulation of disease spread on a network}
+\title{Simulating the model SIRS in a network}
 \usage{
-simulationSIRS(M_adj, pspread, tSim, tI, tImin, tImax, tR, tRmin, tRmax,
-  tcontrol)
+simulationSIRS(A, pspread, tSim, I, tImin, tImax, R, tRmin, tRmax, Control)
 }
 \arguments{
-\item{A}{an adjacency \code{\link{matrix}}}
+\item{A}{An adjacency \code{\link{matrix}}}
+
+\item{pspread}{Probability of disease spread from an infected to a susceptible node}
+
+\item{tSim}{Simulation time}
+
+\item{I}{Vector of infected nodes (initial condition)}
+
+\item{tImin}{Minimum time a node remains infected}
+
+\item{tImax}{Maximum time a node remains infected}
+
+\item{R}{Vector of recovered nodes (initial condition)}
+
+\item{tRmin}{Minimum time a node remains immune}
+
+\item{tRmax}{Maximum time a node remains immune}
+
+\item{Control}{Vector of nodes under a control strategy}
 }
 \value{
-\code{\link{list}}. The first element, a
-        \code{\link{matrix}} of Infected, and the second element, a
-        \code{\link{matrix}} of Recovered.
+A list of 
+\item{M_Sim_I}{a matrix of infected nodes for each time step.} 
+\item{M_Sim_R}{a matrix of recovered nodes for each time step.}
 }
 \description{
-Function to run the simulation of disease spread on a network
+Run the simulation of disease spread in a network
+using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
 }
 \details{
-Function to run the simulation of disease spread on a network
+This function runs the simulation of disease spread in a network
+using the SIRS model. For each time step, the vectors of infected, susceptible
+and recovered nodes are updated, considering that there is a probability \code{pspread}
+of disease spread, infected nodes remain infected during a time randomly sampled between \code{tImin}
+and \code{tImax}, and recovered nodes remain immune during a time randomly sampled between \code{tRmin}
+and \code{tRmax}. Nodes under a control strategy (\code{Control}) are not susceptible to infection.
 }
 \examples{
 # Loading data from....
@@ -29,5 +52,10 @@ Function to run the simulation of disease spread on a network
                                                    
 }
 \references{
-\url{http://github.com/leb-fmvz-usp.github/epinemo}
+Ossada R, Grisi-Filho JHH, Ferreira F, Amaku M (2013). Modeling the Dynamics of Infectious
+Diseases in Different Scale-Free Networks with the Same Degree Distribution. 
+Advanced Studies in Theoretical Physics, 7, 759-771. doi:10.12988/astp.2013.3674
+
+Ossada R. Modelagem de medidas de controle em redes de movimentacao de animais.
+Tese de Doutorado. Sao Paulo, VPS/FMVZ/USP, 2015. doi: 10.11606/T.10.2015.tde-06112015-111048
 }

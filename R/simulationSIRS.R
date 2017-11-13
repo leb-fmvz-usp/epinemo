@@ -1,4 +1,4 @@
-#' @title Simulating the model SIRS in a network
+#' @title Simulating the SIRS model in a network
 #' 
 #' @description Run the simulation of disease spread in a network
 #' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
@@ -16,10 +16,13 @@
 #' 
 #' @details This function runs the simulation of disease spread in a network
 #' using the SIRS model. For each time step, the vectors of infected, susceptible
-#' and recovered nodes are updated, considering that there is a probability \code{pspread}
-#' of disease spread, infected nodes remain infected during a time randomly sampled between \code{tImin}
-#' and \code{tImax}, and recovered nodes remain immune during a time randomly sampled between \code{tRmin}
-#' and \code{tRmax}. Nodes under a control strategy (\code{Control}) are not susceptible to infection.
+#' and recovered nodes are updated, considering that 
+#' there is a probability \code{pspread} of disease spread. 
+#' Infected nodes remain infected during a time randomly sampled 
+#' between \code{tImin} and \code{tImax}. Recovered nodes remain immune 
+#' during a time randomly sampled between \code{tRmin}
+#' and \code{tRmax}. Nodes under a control strategy (\code{Control}) 
+#' are not susceptible to infection.
 #' 
 #' @return  A list of 
 #' \item{M_Sim_I}{a matrix of infected nodes for each time step.} 

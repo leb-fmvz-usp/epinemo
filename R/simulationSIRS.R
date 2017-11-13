@@ -35,17 +35,35 @@
 #' 
 #' @export
 #' @examples 
-#' # Loading data from....
+#' # Generate an arbitrary 200 by 200 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(200 * 200, 1, 0.1), ncol = 200, nrow = 200)
+#' diag(A) <- 0
 #' 
-#' # call function
+#' # Setting the parameters
+#' pspread <- 0.1
+#' tImin <- 5
+#' tImax <- 8
+#' tRmin <- 1
+#' tRmax <- 10
+#' tSim <- 100
 #' 
+#' # Setting the initial conditions for infected, recovered and controlled nodes
+#' num_infected <- 2 # initial number of infected nodes
+#' I <- rep(x = 0, times = nrow(A))
+#' I[1:num_infected] <- 1
+#' I <- sample(I)
+#' R <- rep(x = 0, times = nrow(A))
+#' Control <- rep(x = 0, times = nrow(A))
+#' 
+#' # Run the simulation
+#' sim <- simulationSIRS(A = A, pspread = pspread, tSim = tSim,
+#'                       I = I, tImin = tImin, tImax = tImax, 
+#'                       R = R, tRmin = tRmin, tRmax = tRmax, Control = Control)
+#'
+#' # Plot the prevalence over time
+#' plot(colMeans(sim[[1]]>0), xlab = "Time", ylab = "Prevalence")
 #'                                                    
-# simulationSIRS.R
-# Original version: Raul Ossada
-# Version: 03/Nov/2012
-# Changes: 
-# Marcos Amaku 11/Nov/2015 - including control
-
 
 simulationSIRS <- function(A, pspread, tSim, I, tImin, tImax, R, tRmin, tRmax, Control)
 {

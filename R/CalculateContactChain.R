@@ -67,7 +67,7 @@ calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
   Data <- Data[, c(from, to, Time)]
   Data <- createUniqueIds(data = Data, from = from, to = to)
   #Dimensions of Matrix
-  dimensions <- rep( max(Data$correspondence$network_id), 2)
+  dimensions <- rep( max(Data$correspondence$network.id), 2)
   
   #Break movements by Date
   mov.list <- split(Data$movements, Data$movements[, Time])
@@ -105,7 +105,7 @@ calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
     }
   }
   diag(matrix.ccc) <- 0
-  Data <- data.frame(id = Data$correspondence$database_id)
+  Data <- data.frame(id = Data$correspondence$database.id)
   Data$ingoing <- colSums(matrix.ccc)
   Data$outgoing <- rowSums(matrix.ccc)
   return(Data)

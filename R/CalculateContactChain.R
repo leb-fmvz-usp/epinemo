@@ -1,4 +1,4 @@
-#' @title Calculates contact chain.
+#' @title Calculates contact chain
 #' 
 #' @description Function to calculate outgoing and ingoing contact
 #'              chains.
@@ -50,15 +50,15 @@
 #'     for disease control and risk based surveillance." In: Preventive veterinary
 #'     medicine 99.2-4 (2011), pp. 78-90. doi: 10.1016/j.prevetmed.2010.12.009.
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Loading data from....
 #' 
 #' # call contact chain function
-#' chain <- CalculateContactChain(Data, from, to, Time)
+#' chain <- calculateContactChain(Data, from, to, Time)
 #'                                                    
-CalculateContactChain <- function (Data, from, to, Time, simultaneous=T)
+calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
 {
   require(Matrix)
   #check

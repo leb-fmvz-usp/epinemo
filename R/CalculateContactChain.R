@@ -65,7 +65,7 @@ calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
   stopifnot(class(Data[,Time]) == "Date")
   #Create new IDs
   Data <- Data[, c(from, to, Time)]
-  Data <- CreateUniqueIds(data = Data, from = from, to = to)
+  Data <- createUniqueIds(data = Data, from = from, to = to)
   #Dimensions of Matrix
   dimensions <- rep( max(Data$correspondence$network_id), 2)
   

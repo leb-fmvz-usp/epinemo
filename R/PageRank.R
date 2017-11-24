@@ -10,13 +10,13 @@
 #' 
 #' @references Livro do PageRank
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Calculates PageRank
-#' PageRank(A)
+#' pageRank(A)
 
-PageRank <- function(A,alpha=0.85,epsilon=1e-8,pr0,v)
+pageRank <- function(A,alpha=0.85,epsilon=1e-8,pr0,v)
 {
   n <- dim(A)[1]
   if (missing(pr0))

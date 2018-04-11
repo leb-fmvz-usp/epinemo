@@ -18,18 +18,18 @@
 #' 
 #' @references Kim (2010), (Kirkpatrick, Gelatt e Vecchi, 1983)
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Calculates the optimal partition of a given network
-#' LinkRankOptimalPartition(A)
+#' linkRankOptimalPartition(A)
 
-LinkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_itry,max_heat,max_rej,plots=F,location=getwd())
+linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_itry,max_heat,max_rej,plots=F,location=getwd())
 {
 #   Parâmetros
   if (missing(qlrM))
   {
-    pr <- PageRank(A)
+    pr <- pageRank(A)
     G <- GoogleMatrix(A)
     L <- LinkRank(G,pr)
     qlrM <- LinkRankModMatrix(L,pr)

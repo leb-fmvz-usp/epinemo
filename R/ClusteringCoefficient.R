@@ -15,15 +15,15 @@
 #' @references 
 #' [1] CALDARELLI, G. Scale-Free Networks. Oxford: Oxford University Press, 2007.
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
+# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Loading data from....
 #' 
 #' # call contact chain function
-#' cc <- ClusteringCoefficient(A)
+#' cc <- clusteringCoefficient(A)
 #'                                                    
-ClusteringCoefficient <- function(A, directed=T)
+clusteringCoefficient <- function(A, directed=T)
 {
   if (directed)
   {

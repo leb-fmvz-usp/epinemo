@@ -7,6 +7,7 @@
 epinemo.Rcheck
 Gemfile
 epinemo.Rproj
+epinemoGithub.Rproj
 
 ##### fernandosm files ######
 calculate_infection_chain_origin.R

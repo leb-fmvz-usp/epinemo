@@ -1,45 +1,86 @@
-#' @title Function to run the simulation of disease spread on a network
+#' @title Simulating the SIRS model in a network
 #' 
-#' @description Function to run the simulation of disease spread on a network
+#' @description Run the simulation of disease spread in a network
+#' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
 #' 
-#' @param A an adjacency \code{\link{matrix}}
+#' @param A An adjacency \code{\link{matrix}}
+#' @param pspread Probability of disease spread from an infected to a susceptible node
+#' @param tSim Simulation time
+#' @param I Vector of infected nodes (initial condition)
+#' @param tImin Minimum time a node remains infected
+#' @param tImax Maximum time a node remains infected
+#' @param R Vector of recovered nodes (initial condition) 
+#' @param tRmin Minimum time a node remains immune
+#' @param tRmax Maximum time a node remains immune
+#' @param Control Vector of nodes under a control strategy
 #' 
-#' @details Function to run the simulation of disease spread on a network
+#' @details This function runs the simulation of disease spread in a network
+#' using the SIRS model. For each time step, the vectors of infected, susceptible
+#' and recovered nodes are updated, considering that 
+#' there is a probability \code{pspread} of disease spread. 
+#' Infected nodes remain infected during a time randomly sampled 
+#' between \code{tImin} and \code{tImax}. Recovered nodes remain immune 
+#' during a time randomly sampled between \code{tRmin}
+#' and \code{tRmax}. Nodes under a control strategy (\code{Control}) 
+#' are not susceptible to infection.
 #' 
-#' @return \code{\link{list}}. The first element, a
-#'         \code{\link{matrix}} of Infected, and the second element, a
-#'         \code{\link{matrix}} of Recovered.
+#' @return  A list of 
+#' \item{M_Sim_I}{a matrix of infected nodes for each time step.} 
+#' \item{M_Sim_R}{a matrix of recovered nodes for each time step.}
 #' 
 #' @references 
+#' Ossada R, Grisi-Filho JHH, Ferreira F, Amaku M (2013). Modeling the Dynamics of Infectious
+#' Diseases in Different Scale-Free Networks with the Same Degree Distribution. 
+#' Advanced Studies in Theoretical Physics, 7, 759-771. doi:10.12988/astp.2013.3674
 #' 
+#' Ossada R. Modelagem de medidas de controle em redes de movimentacao de animais.
+#' Tese de Doutorado. Sao Paulo, VPS/FMVZ/USP, 2015. doi: 10.11606/T.10.2015.tde-06112015-111048
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
-#' # Loading data from....
+#' # Generate an arbitrary 200 by 200 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(200 * 200, 1, 0.1), ncol = 200, nrow = 200)
+#' diag(A) <- 0
 #' 
-#' # call function
+#' # Setting the parameters
+#' pspread <- 0.1
+#' tImin <- 5
+#' tImax <- 8
+#' tRmin <- 1
+#' tRmax <- 10
+#' tSim <- 100
 #' 
+#' # Setting the initial conditions for infected, recovered and controlled nodes
+#' num_infected <- 2 # initial number of infected nodes
+#' I <- rep(x = 0, times = nrow(A))
+#' I[1:num_infected] <- 1
+#' I <- sample(I)
+#' R <- rep(x = 0, times = nrow(A))
+#' Control <- rep(x = 0, times = nrow(A))
+#' 
+#' # Run the simulation
+#' sim <- simulationSIRS(A = A, pspread = pspread, tSim = tSim,
+#'                       I = I, tImin = tImin, tImax = tImax, 
+#'                       R = R, tRmin = tRmin, tRmax = tRmax, Control = Control)
+#'
+#' # Plot the prevalence over time
+#' plot(colMeans(sim[[1]]>0), xlab = "Time", ylab = "Prevalence")
 #'                                                    
-# simulationSIRS.R
-# Original version: Raul Ossada
-# Version: 03/Nov/2012
-# Changes: 
-# Marcos Amaku 11/Nov/2015 - including control
 
-# Function to run the simulation of disease spread on a network
-
-#####################################################################################
-
-simulationSIRS <- function(M_adj, pspread, tSim, tI, tImin, tImax,  tR, tRmin, tRmax, tcontrol)
+simulationSIRS <- function(A, pspread, tSim, I, tImin, tImax, R, tRmin, tRmax, Control)
 {
     # Builds the simulation matrix where each row represents a vertex and each column represents a time step of the simulation...
     # ... for the 'infected' vertices
-    M_Sim_I = matrix(data=NA, nrow=nrow(M_adj), ncol=(tSim+1) );
+    M_Sim_I = matrix(data=NA, nrow=nrow(A), ncol=(tSim+1) );
 
     # ... for the 'recovered' vertices
-    M_Sim_R = matrix(data=NA, nrow=nrow(M_adj), ncol=(tSim+1) );
+    M_Sim_R = matrix(data=NA, nrow=nrow(A), ncol=(tSim+1) );
 
+    # Assigning the vectors I and R to tI and tR
+    tI <- I
+    tR <- R
+    
     # For each time step...
     for( i in 1:tSim )
     {
@@ -55,24 +96,24 @@ simulationSIRS <- function(M_adj, pspread, tSim, tI, tImin, tImax,  tR, tRmin, t
         S = as.numeric(!I&!R);
 
         # Multiply the 'infected' vector by the adjacency matrix, generating the potential infection vector
-        Pvector = I %*% M_adj;
+        Pvector = I %*% A;
 
         # Vector with the probability of each vertex getting infected
         Pvertex = 1 - (1-pspread)^Pvector;
                 
         # Generating a vector with random numbers based on a uniform distribution [0,1]
-        Prand = runif(n=length(M_adj[1,]), min=0, max=1);
+        Prand = runif(n=length(A[1,]), min=0, max=1);
 
         # If Prand(i) <= Pvertex(i), the vertex becames 'infected'
         Pinfection = as.numeric(Prand<=Pvertex);
         
         # Vertices under a control strategy may not be infected
-        Pinfection = Pinfection*!(tcontrol);
+        Pinfection = Pinfection*!(Control);
 
         # Creating the new 'infected' vector: S=(0,1) AND Pinfection=(0,1)
         Inew = as.numeric(S & (Pinfection) );
 
-	  # If a vertex is about to be 'recovered', mark it as a new 'recovered' vertex
+	      # If a vertex is about to be 'recovered', mark it as a new 'recovered' vertex
         Rnew = rep( 0, length(R) );
         Rnew[tI==1] = 1;
 
@@ -118,7 +159,7 @@ simulationSIRS <- function(M_adj, pspread, tSim, tI, tImin, tImax,  tR, tRmin, t
 
         # Merge the new 'recovered' vertices with the older ones
         # Nodes under a control strategy are also included
-        tR = tRnew + aux_tR + tcontrol;
+        tR = tRnew + aux_tR + Control;
 
     }
     # Inputs the results of the last time step of the simulation, in the simulation matrix

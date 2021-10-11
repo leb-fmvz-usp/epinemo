@@ -4,8 +4,20 @@
 \alias{SIRS2nets}
 \title{SIRS model in two networks with the same nodes}
 \usage{
-SIRS2nets(A1, A2, pspread1, pspread2, tSim, I, tImin, tImax, R, tRmin, tRmax,
-  Control)
+SIRS2nets(
+  A1,
+  A2,
+  pspread1,
+  pspread2,
+  tSim,
+  I,
+  tImin,
+  tImax,
+  R,
+  tRmin,
+  tRmax,
+  Control
+)
 }
 \arguments{
 \item{A1}{The adjacency \code{\link{matrix}} of network 1}

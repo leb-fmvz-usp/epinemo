@@ -4,8 +4,13 @@
 \alias{pareto}
 \title{Graph to check the 80-20 rule (Pareto principle)}
 \usage{
-pareto(A, xlabel = "More connected nodes (\%)", ylabel = "\% of total",
-  legin = "in", legout = "out")
+pareto(
+  A,
+  xlabel = "More connected nodes (\%)",
+  ylabel = "\% of total",
+  legin = "in",
+  legout = "out"
+)
 }
 \arguments{
 \item{A}{An adjacency \code{\link{matrix}}.}
@@ -13,8 +18,6 @@ pareto(A, xlabel = "More connected nodes (\%)", ylabel = "\% of total",
 \item{xlabel}{The text for the x-axis label.}
 
 \item{ylabel}{The text for the y-axis label.}
-
-\item{legin}{The text for the legend of the indegree.}
 
 \item{legin}{The text for the legend of the outdegree.}
 }

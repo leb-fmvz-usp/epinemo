@@ -4,8 +4,19 @@
 \alias{linkRankOptimalPartition}
 \title{Linkrank Modularity Optimization}
 \usage{
-linkRankOptimalPartition(qlrM, A, c, Tc = 1, minTc = 1e-10, cool = 0.995,
-  max_itry, max_heat, max_rej, plots = F, location = getwd())
+linkRankOptimalPartition(
+  qlrM,
+  A,
+  c,
+  Tc = 1,
+  minTc = 1e-10,
+  cool = 0.995,
+  max_itry,
+  max_heat,
+  max_rej,
+  plots = F,
+  location = getwd()
+)
 }
 \arguments{
 \item{A}{Alternatively, the network adjacency matrix can be provided.}

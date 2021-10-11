@@ -92,7 +92,7 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
       concluded <- (t_cicles-r_cicles)/t_cicles
       writeLines(paste(
         paste('Temperatura =',signif(Tc,digits=3)),'\n',
-        paste('Rejeições =',rej),'\n',
+        paste('Rejections =',rej),'\n',
         paste('Trocas por calor =',heat),'\n',
         paste(signif(100*concluded,2),'% concluído (Faltam ',r_cicles,' ciclos)',sep=''),'\n',
         paste('Estou rodando há',signif(time2/3600,2),'horas (',round(time2/60),'minutos)'),'\n',
@@ -113,7 +113,7 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
   #Last ouptut
   writeLines(paste(
         paste('Temperatura =',signif(Tc,digits=1)),'\n',
-        paste('Rejeições consecutivas =',rej),'\n',
+        paste('Consecutive rejections =',rej),'\n',
         paste('Trocas por calor consecutivas =',heat),'\n'))
       if (plots==T)
       {

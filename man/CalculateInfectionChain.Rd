@@ -4,8 +4,15 @@
 \alias{CalculateInfectionChain}
 \title{Calculates infection chain.}
 \usage{
-CalculateInfectionChain(Data, from, to, Time, selected.nodes,
-  type = "outgoing", number.of.cores = NULL)
+CalculateInfectionChain(
+  Data,
+  from,
+  to,
+  Time,
+  selected.nodes,
+  type = "outgoing",
+  number.of.cores = NULL
+)
 }
 \arguments{
 \item{Data}{\code{\link{data.frame}} with network information : node ID, origin

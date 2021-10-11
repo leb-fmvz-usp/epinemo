@@ -3,7 +3,7 @@
 #' @description Make a graph of the percentage of more connected nodes
 #' as a function of the percentage of the total (weighted) indegree and outdegree
 #' 
-#' @param A An adjacency \code{\link{matrix}}. 
+#' @param A An adjacency \code{\link[base]{matrix}}. 
 #' @param xlabel The text for the x-axis label.
 #' @param ylabel The text for the y-axis label.
 #' @param legin The text for the legend of the indegree.
@@ -26,7 +26,9 @@
 #' @references 
 #' Negreiros RL, Grisi-Filho JHH,  Dias RA, Ferreira F, Ferreira Neto JS, 
 #' Ossada R, Amaku M. 
-#' Analysis of the cattle trade network in the state of Mato Grosso, Brazil.
+#' Analysis of the Cattle Trade Network in the State of Mato Grosso, Brazil.
+#' Brazilian Journal of Veterinary Research and Animal Science, 57 (4), e171635.
+#' \doi{/10.11606/issn.1678-4456.bjvras.2020.171635}
 #' 
 #' 
 #' @export

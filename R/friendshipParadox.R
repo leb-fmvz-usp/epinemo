@@ -2,7 +2,7 @@
 #' 
 #' @description Calculate parameters related to the friendship paradox
 #' 
-#' @param A An adjacency \code{\link{matrix}}.
+#' @param A An adjacency \code{\link[base]{matrix}}.
 #' 
 #' @details This function calculates the following friendship paradox metrics: mean degree (\code{kmean}),
 #' mean degree of friends (\code{kff}), ratio between \code{kff} and \code{kmean} 

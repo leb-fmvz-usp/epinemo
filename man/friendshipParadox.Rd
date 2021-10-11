@@ -7,7 +7,7 @@
 friendshipParadox(A)
 }
 \arguments{
-\item{A}{An adjacency \code{\link{matrix}}.}
+\item{A}{An adjacency \code{\link[base]{matrix}}.}
 }
 \value{
 A list of 

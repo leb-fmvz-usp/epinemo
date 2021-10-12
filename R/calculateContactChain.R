@@ -30,25 +30,34 @@
 #'         \code{$outgoing}, is the outgoing contact chain value.
 #' 
 #' @references 
-#' [1] K Buttner, J Krieter, and I Traulsen. "Characterization of Contact Structures
+#' [1] Buttner K, Krieter J, Traulsen I (2015). "Characterization of Contact Structures
 #'     for the Spread of Infectious Diseases in a Pork Supply Chain in Northern
-#'     Germany by Dynamic Network Analysis of Yearly and Monthly Networks." In:
-#'     Transboundary and emerging diseases 2000 (May 2013), pp. 1-12.
-#' [2] C Dube, C Ribble, D Kelton, et al. "Comparing network analysis measures to
-#'     determine potential epidemic size of highly contagious exotic diseases in
-#'     fragmented monthly networks of dairy cattle movements in Ontario, Canada."
-#'     In: Transboundary and emerging diseases 55.9-10 (Dec. 2008), pp. 382-392.
-#' [3] C Dube, C Ribble, D Kelton, et al. "A review of network analysis terminology
-#'     and its application to foot-and-mouth disease modelling and policy development."
-#'     In: Transboundary and emerging diseases 56.3 (Apr. 2009), pp. 73-85.
-#' [4] Jenny Frossling, Anna Ohlson, Camilla Bj ̈orkman, et al. "Application of
-#'     network analysis parameters in risk-based surveillance - Examples based
-#'     on cattle trade data and bovine infections in Sweden." In:  Preventive
-#'     veterinary medicine 105.3 (July 2012), pp. 202-208. doi: 10.1016/j.prevetmed.2011.12.011.
-#' [5] Maria Noremark, Nina Ha kansson, Susanna Sternberg Lewerin, et al.
-#'     "Network analysis of cattle and pig movements in Sweden: measures relevant
-#'     for disease control and risk based surveillance." In: Preventive veterinary
-#'     medicine 99.2-4 (2011), pp. 78-90. doi: 10.1016/j.prevetmed.2010.12.009.
+#'     Germany by Dynamic Network Analysis of Yearly and Monthly Networks."
+#'     Transboundary and Emerging Diseases, 62, 188-199.
+#'     \doi{10.1111/tbed.12106}
+#'     
+#' [2] Dube C, Ribble C, Kelton D, et al. (2008). "Comparing Network Analysis Measures to
+#'     Determine Potential Epidemic Size of Highly Contagious Exotic Diseases in
+#'     Fragmented Monthly Networks of Dairy Cattle Movements in Ontario, Canada."
+#'     Transboundary and Emerging Diseases, 55 (9-10), 382-392.
+#'     \doi{10.1111/j.1865-1682.2008.01053.x}
+#'     
+#' [3] Dube C, Ribble C, Kelton D, et al. (2009). "A Review of Network Analysis Terminology
+#'     and its Application to Foot-and-Mouth Disease Modelling and Policy Development."
+#'     Transboundary and Emerging Diseases, 56 (3), 73-85.
+#'     \doi{10.1111/j.1865-1682.2008.01064.x}
+#'     
+#' [4] Frossling J, Ohlson A, Bjorkman C, et al. (2012). "Application of
+#'     Network Analysis Parameters in Risk-Based Surveillance - Examples Based
+#'     on Cattle Trade Data and Bovine Infections in Sweden." 
+#'     Preventive Veterinary Medicine, 105 (3), 202-208. 
+#'     \doi{10.1016/j.prevetmed.2011.12.011}
+#'     
+#' [5] Noremark M, Hakansson N, Lewerin SS, et al. (2011).
+#'     "Network Analysis of Cattle and Pig Movements in Sweden: Measures Relevant
+#'     for Disease Control and Risk Based Surveillance." 
+#'     Preventive Veterinary Medicine, 99 (2-4), 78-90. 
+#'     \doi{10.1016/j.prevetmed.2010.12.009}
 #' 
 # \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

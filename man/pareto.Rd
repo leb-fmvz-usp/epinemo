@@ -50,9 +50,9 @@ pareto(A)
 
 }
 \references{
-Negreiros RL, Grisi-Filho JHH,  Dias RA, Ferreira F, Ferreira Neto JS, 
-Ossada R, Amaku M. 
-Analysis of the Cattle Trade Network in the State of Mato Grosso, Brazil.
+[1] Negreiros RL, Grisi-Filho JHH,  Dias RA, Ferreira F, Ferreira Neto JS, 
+Ossada R, Amaku M (2020). 
+"Analysis of the Cattle Trade Network in the State of Mato Grosso, Brazil."
 Brazilian Journal of Veterinary Research and Animal Science, 57 (4), e171635.
 \doi{/10.11606/issn.1678-4456.bjvras.2020.171635}
 }

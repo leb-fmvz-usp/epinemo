@@ -79,10 +79,13 @@ plot(colMeans(sim[[1]]>0), xlab = "Time", ylab = "Prevalence")
                                                    
 }
 \references{
-Ossada R, Grisi-Filho JHH, Ferreira F, Amaku M (2013). Modeling the Dynamics of Infectious
-Diseases in Different Scale-Free Networks with the Same Degree Distribution. 
-Advanced Studies in Theoretical Physics, 7, 759-771. doi:10.12988/astp.2013.3674
+[1] Ossada R, Grisi-Filho JHH, Ferreira F, Amaku M (2013). 
+"Modeling the Dynamics of Infectious
+Diseases in Different Scale-Free Networks with the Same Degree Distribution." 
+Advanced Studies in Theoretical Physics, 7, 759-771. 
+\doi{10.12988/astp.2013.3674}
 
-Ossada R. Modelagem de medidas de controle em redes de movimentacao de animais.
-Tese de Doutorado. Sao Paulo, VPS/FMVZ/USP, 2015. doi: 10.11606/T.10.2015.tde-06112015-111048
+[2] Ossada R (2015). "Modelagem de Medidas de Controle em Redes de Movimentacao de Animais."
+PhD Thesis. Sao Paulo, School of Veterinary Medicine, University of Sao Paulo. 
+\doi{10.11606/T.10.2015.tde-06112015-111048}
 }

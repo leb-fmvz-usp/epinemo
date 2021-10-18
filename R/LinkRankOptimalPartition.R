@@ -16,9 +16,18 @@
 #' Uses Simulated Annealing (see reference) 
 #' Only test simple movements between groups, doesn't test group movements.
 #' 
-#' @references Kim (2010), (Kirkpatrick, Gelatt e Vecchi, 1983)
+#' @references 
+#' [1] Kim Y, Son SW, Jeong H (2010). 
+#' "Finding communities in directed networks." 
+#' Physical Review E 81, 016103.
+#' \doi{10.1103/PhysRevE.81.016103}
 #' 
-# \url{http://github.com/leb-fmvz-usp.github/epinemo}
+#' [2] Kirkpatrick S, Gelatt CDJ, Vecchi MP (1983). 
+#' "Optimization by simulated annealing." 
+#' Science 220 (May (4598)), 671-680.
+#' \url{http://www.ncbi.nlm.nih.gov/pubmed/17813860}
+#' 
+#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Calculates the optimal partition of a given network
@@ -26,7 +35,7 @@
 
 linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_itry,max_heat,max_rej,plots=F,location=getwd())
 {
-#   Parâmetros
+#   Parameters
   if (missing(qlrM))
   {
     pr <- pageRank(A)
@@ -50,22 +59,22 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
     palette(paleta(length(lc)))
     netA <- as.network.matrix(as.matrix(A))
   }
-#   Variáveis iniciais
+#   Initial variables
   itry <- total <- heat <- rej <- concluded <- 0
   t_cicles <- round(log (minTc/Tc,base=cool))
   time1 <- proc.time()[3]
   while (Tc >= minTc & rej < max_rej)
   {
     itry <- itry+1
-    #Sorteia um nó e uma comunidade para trocar
+    # Draw a node and a community to exchange
     nsort <- sample(n,1)
     csort <- sample(lc[-which(lc==c[nsort])],1)
-    # daí calcula a contribuição do nó 'n' quando em uma comunidade, e quando em outra
+    # Then calculates the contribution of node 'n' when in one community, and when in another
     LqlrM <- qlrM[nsort,]
     CqlrM <- qlrM[,nsort]
-    oldm <- sum(LqlrM[c==c[nsort]]) + sum(CqlrM[c==c[nsort]]) #contribuição atual do nó sorteado na modularidade
-    newm <- sum(LqlrM[c==csort]) + sum(CqlrM[c==csort]) #contribuição futura do nó sorteado na modularidade
-    # e agora decide se troca ou não
+    oldm <- sum(LqlrM[c==c[nsort]]) + sum(CqlrM[c==c[nsort]]) #current contribution of the drawn node in modularity
+    newm <- sum(LqlrM[c==csort]) + sum(CqlrM[c==csort]) #future contribution of the drawn node in modularity
+    # Now decide whether to switch or not
     if (newm>=oldm)
       {
       c[nsort] <- csort
@@ -91,12 +100,12 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
       conc_previous <- concluded
       concluded <- (t_cicles-r_cicles)/t_cicles
       writeLines(paste(
-        paste('Temperatura =',signif(Tc,digits=3)),'\n',
+        paste('Temperature =',signif(Tc,digits=3)),'\n',
         paste('Rejections =',rej),'\n',
-        paste('Trocas por calor =',heat),'\n',
-        paste(signif(100*concluded,2),'% concluído (Faltam ',r_cicles,' ciclos)',sep=''),'\n',
-        paste('Estou rodando há',signif(time2/3600,2),'horas (',round(time2/60),'minutos)'),'\n',
-        paste('Acho que faltam',signif(time3/3600,2),'horas (',round(time3/60),'minutos)'),'\n'))
+        paste('Heat exchanges =',heat),'\n',
+        paste(signif(100*concluded,2),'% completed (Still missing ',r_cicles,' cycles)',sep=''),'\n',
+        paste('Running for',signif(time2/3600,2),'hours (',round(time2/60),'minutes)'),'\n',
+        paste('Probably still lacking',signif(time3/3600,2),'hours (',round(time3/60),'minutes)'),'\n'))
       if ( signif(1-concluded,1) < signif(1-conc_previous,1))
       {
         if (plots==T)
@@ -112,9 +121,9 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
     } #end While
   #Last ouptut
   writeLines(paste(
-        paste('Temperatura =',signif(Tc,digits=1)),'\n',
+        paste('Temperature =',signif(Tc,digits=1)),'\n',
         paste('Consecutive rejections =',rej),'\n',
-        paste('Trocas por calor consecutivas =',heat),'\n'))
+        paste('Consecutive heat exchanges =',heat),'\n'))
       if (plots==T)
       {
           png(paste(location,'KimFinal','T',signif(Tc,digits=2),'.png',sep=''))

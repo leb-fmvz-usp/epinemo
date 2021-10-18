@@ -57,5 +57,15 @@ Only test simple movements between groups, doesn't test group movements.
 linkRankOptimalPartition(A)
 }
 \references{
-Kim (2010), (Kirkpatrick, Gelatt e Vecchi, 1983)
+[1] Kim Y, Son SW, Jeong H (2010). 
+"Finding communities in directed networks." 
+Physical Review E 81, 016103.
+\doi{10.1103/PhysRevE.81.016103}
+
+[2] Kirkpatrick S, Gelatt CDJ, Vecchi MP (1983). 
+"Optimization by simulated annealing." 
+Science 220 (May (4598)), 671-680.
+\url{http://www.ncbi.nlm.nih.gov/pubmed/17813860}
+
+\url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

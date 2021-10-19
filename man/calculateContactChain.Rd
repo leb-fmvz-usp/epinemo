@@ -19,7 +19,7 @@ the destiny node of each link.}
 \item{Time}{\code{\link{character}}, indicates the column used to characterize
 the time in which the link was established.}
 
-\item{simultaneous}{\code{\link{logical}}, wether movements within 
+\item{simultaneous}{\code{\link{logical}}, whether movements within 
 the same time stamp (same day) are simultaneous (\code{\link{TRUE}})
 with no indirect contacts within each day or 
 continuous (\code{\link{FALSE}}) and indirect contacts between movements

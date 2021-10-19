@@ -30,7 +30,7 @@ createUniqueIds <- function(data, from, to)
   if ( sum( is.na( c( data[, from], data[, to]))) > 0)
     stop('NA found in one of the identifiers columns')
   
-  # Test if is there more than one identifier
+  # Test if there is more than one identifier
   if (length(from) == 1 & length(to) == 1) {
     data$from.id.old <- data[,from]
     data$to.id.old <- data[,to]

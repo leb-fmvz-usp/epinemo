@@ -72,8 +72,8 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
     # Then calculates the contribution of node 'n' when in one community, and when in another
     LqlrM <- qlrM[nsort,]
     CqlrM <- qlrM[,nsort]
-    oldm <- sum(LqlrM[c==c[nsort]]) + sum(CqlrM[c==c[nsort]]) #current contribution of the drawn node in modularity
-    newm <- sum(LqlrM[c==csort]) + sum(CqlrM[c==csort]) #future contribution of the drawn node in modularity
+    oldm <- sum(LqlrM[c==c[nsort]]) + sum(CqlrM[c==c[nsort]]) # current contribution of the drawn node in modularity
+    newm <- sum(LqlrM[c==csort]) + sum(CqlrM[c==csort]) # future contribution of the drawn node in modularity
     # Now decide whether to switch or not
     if (newm>=oldm)
       {
@@ -118,8 +118,8 @@ linkRankOptimalPartition <- function(qlrM,A,c,Tc=1,minTc=1e-10,cool=0.995,max_it
       Tc <- cool*Tc
       itry <- heat <- rej <- 0
       }
-    } #end While
-  #Last ouptut
+    } # end While
+  # Last ouptut
   writeLines(paste(
         paste('Temperature =',signif(Tc,digits=1)),'\n',
         paste('Consecutive rejections =',rej),'\n',

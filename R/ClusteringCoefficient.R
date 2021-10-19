@@ -2,8 +2,8 @@
 #' 
 #' @description Function to calculate the clustering coefficient for all nodes in a network.
 #' 
-#' @param A an adjancency \code{\link{matrix}} with network information.
-#' @param directed \code{\link{logical}} wether to calculate the directed or undirected clustering coefficients.
+#' @param A an adjacency \code{\link{matrix}} with network information.
+#' @param directed \code{\link{logical}} whether to calculate the directed or undirected clustering coefficients.
 #' 
 #' @details This function calculates the Inward and Outward clustering coefficient (formulas) in directed networks. 
 #' 

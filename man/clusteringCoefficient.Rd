@@ -7,9 +7,9 @@
 clusteringCoefficient(A, directed = T)
 }
 \arguments{
-\item{A}{an adjancency \code{\link{matrix}} with network information.}
+\item{A}{an adjacency \code{\link{matrix}} with network information.}
 
-\item{directed}{\code{\link{logical}} wether to calculate the directed or undirected clustering coefficients.}
+\item{directed}{\code{\link{logical}} whether to calculate the directed or undirected clustering coefficients.}
 }
 \value{
 If directed = TRUE, a \code{\link{data.frame}}. The first column,

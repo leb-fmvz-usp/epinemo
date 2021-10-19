@@ -32,7 +32,7 @@ Make a graph of the percentage of more connected nodes
 as a function of the percentage of the total (weighted) indegree and outdegree
 }
 \details{
-This function sorts in descreasing order 
+This function sorts in decreasing order 
 the indegree and outdegree of the nodes of a netowrk.
 Then the function calculates the percentage of more connected nodes 
 and the corresponding percentage of the total indegree and outdegree.

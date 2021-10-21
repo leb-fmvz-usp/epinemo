@@ -1,10 +1,12 @@
-#' row-normalized hyperlink matrix
+#' Row-Normalized Hyperlink Matrix
 #' @description This function creates a sparse row-normalized hyperlink matrix
 #' @param A network adjacency \code{\link{matrix}} 
 #' @return row-normalized hyperlink matrix
 #' @details Complicated function... see the book!
 #' 
-#' @references Livro do PageRank
+#' @references
+#' [1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
+#' of Search Engine Rankings." Princeton University Press, Princeton.
 #' 
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

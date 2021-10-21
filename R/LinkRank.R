@@ -1,11 +1,15 @@
-#' Linkrank Matrix
-#' @description Calculates the LinkRank Matrix, according to Kim (2010)
+#' LinkRank Matrix
+#' @description Calculates the LinkRank Matrix, according to Kim et al. [1]
 #' @param G Google Matrix. Output of \code{\link{GoogleMatrix}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
 #' @return LinkRank Matrix
 #' @details Complicated function... see the paper!
 #' 
-#' @references Kim (2010)
+#' @references 
+#' [1] Kim Y, Son SW, Jeong H (2010). 
+#' "Finding Communities in Directed Networks." 
+#' Physical Review E 81, 016103.
+#' \doi{10.1103/PhysRevE.81.016103}
 #' 
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

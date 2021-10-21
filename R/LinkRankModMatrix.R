@@ -1,11 +1,15 @@
-#' #' Linkrank Modularity Matrix
-#' @description Generates a matrix with contributions to LinkRank Modularity, according to Kim (2010)
+#' LinkRank Modularity Matrix
+#' @description Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1]
 #' @param L LinkRank Matrix. Output of \code{\link{LinkRank}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
 #' @return LinkRank Modularity Matrix, where [i,j] is the contribution to LinkRank Modularity if "i" and "j" are assigned to the same community
 #' @details Complicated function... see the paper!
 #' 
-#' @references Kim (2010)
+#' @references 
+#' [1] Kim Y, Son SW, Jeong H (2010). 
+#' "Finding Communities in Directed Networks." 
+#' Physical Review E 81, 016103.
+#' \doi{10.1103/PhysRevE.81.016103}
 #' 
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

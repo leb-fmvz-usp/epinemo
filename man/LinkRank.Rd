@@ -2,7 +2,7 @@
 % Please edit documentation in R/LinkRank.R
 \name{LinkRank}
 \alias{LinkRank}
-\title{Linkrank Matrix}
+\title{LinkRank Matrix}
 \usage{
 LinkRank(G, pr)
 }
@@ -15,7 +15,7 @@ LinkRank(G, pr)
 LinkRank Matrix
 }
 \description{
-Calculates the LinkRank Matrix, according to Kim (2010)
+Calculates the LinkRank Matrix, according to Kim et al. [1]
 }
 \details{
 Complicated function... see the paper!
@@ -25,7 +25,10 @@ Complicated function... see the paper!
 LinkRank(G,pr)
 }
 \references{
-Kim (2010)
+[1] Kim Y, Son SW, Jeong H (2010). 
+"Finding Communities in Directed Networks." 
+Physical Review E 81, 016103.
+\doi{10.1103/PhysRevE.81.016103}
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/LinkRankModMatrix.R
 \name{LinkRankModMatrix}
 \alias{LinkRankModMatrix}
-\title{#' Linkrank Modularity Matrix}
+\title{LinkRank Modularity Matrix}
 \usage{
 LinkRankModMatrix(L, pr)
 }
@@ -15,7 +15,7 @@ LinkRankModMatrix(L, pr)
 LinkRank Modularity Matrix, where [i,j] is the contribution to LinkRank Modularity if "i" and "j" are assigned to the same community
 }
 \description{
-Generates a matrix with contributions to LinkRank Modularity, according to Kim (2010)
+Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1]
 }
 \details{
 Complicated function... see the paper!
@@ -25,7 +25,10 @@ Complicated function... see the paper!
 LinkRankModMatrix(L,pr)
 }
 \references{
-Kim (2010)
+[1] Kim Y, Son SW, Jeong H (2010). 
+"Finding Communities in Directed Networks." 
+Physical Review E 81, 016103.
+\doi{10.1103/PhysRevE.81.016103}
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

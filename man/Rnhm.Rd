@@ -2,7 +2,7 @@
 % Please edit documentation in R/Rnhm.R
 \name{Rnhm}
 \alias{Rnhm}
-\title{row-normalized hyperlink matrix}
+\title{Row-Normalized Hyperlink Matrix}
 \usage{
 Rnhm(A)
 }
@@ -23,7 +23,8 @@ Complicated function... see the book!
 Rnhm(A)
 }
 \references{
-Livro do PageRank
+[1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
+of Search Engine Rankings." Princeton University Press, Princeton.
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

@@ -31,7 +31,8 @@ This function uses the Power method.
 PageRank_H(rnhm(A))
 }
 \references{
-Livro do PageRank
+[1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
+of Search Engine Rankings." Princeton University Press, Princeton.
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

@@ -8,7 +8,9 @@
 #' @return Numeric vector with nodes' PageRank
 #' @details This function uses the Power method.
 #' 
-#' @references Livro do PageRank
+#' @references 
+#' [1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
+#' of Search Engine Rankings." Princeton University Press, Princeton.
 #' 
 #' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

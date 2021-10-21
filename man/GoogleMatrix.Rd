@@ -25,7 +25,13 @@ This function is very simple.
 Google.matrix(A)
 }
 \references{
-Page et al. (1999); Langville e Meyer (2006)
+[1] Page L, Brin S, Motwani R, Winograd T (1999). "The PageRank 
+Citation Ranking: Bringing Order to the Web." Stanford Digital 
+Library Technologies Project 1999.
+\url{http://www.db.stanford.edu/~backrub/pageranksub.ps}
+
+[2] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
+of Search Engine Rankings." Princeton University Press, Princeton.
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

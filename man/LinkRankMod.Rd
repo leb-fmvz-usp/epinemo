@@ -2,7 +2,7 @@
 % Please edit documentation in R/LinkRankMod.R
 \name{LinkRankMod}
 \alias{LinkRankMod}
-\title{Linkrank Modularity}
+\title{LinkRank Modularity}
 \usage{
 LinkRankMod(L, pr, c)
 }
@@ -17,7 +17,7 @@ LinkRankMod(L, pr, c)
 LinkRank Modularity value
 }
 \description{
-Computes the Link Rank Modularity (Qlr), as described by Kim (2010)
+Computes the Link Rank Modularity (Qlr), as described by Kim et al. [1]
 }
 \details{
 Complicated function... see the paper!
@@ -27,7 +27,10 @@ Complicated function... see the paper!
 LinkRankMod(L,pr,c)
 }
 \references{
-Kim (2010)
+[1] Kim Y, Son SW, Jeong H (2010). 
+"Finding Communities in Directed Networks." 
+Physical Review E 81, 016103.
+\doi{10.1103/PhysRevE.81.016103}
 
 \url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

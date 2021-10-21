@@ -2,7 +2,7 @@
 % Please edit documentation in R/LinkRankOptimalPartition.R
 \name{linkRankOptimalPartition}
 \alias{linkRankOptimalPartition}
-\title{Linkrank Modularity Optimization}
+\title{LinkRank Modularity Optimization}
 \usage{
 linkRankOptimalPartition(
   qlrM,
@@ -58,12 +58,12 @@ linkRankOptimalPartition(A)
 }
 \references{
 [1] Kim Y, Son SW, Jeong H (2010). 
-"Finding communities in directed networks." 
+"Finding Communities in Directed Networks." 
 Physical Review E 81, 016103.
 \doi{10.1103/PhysRevE.81.016103}
 
 [2] Kirkpatrick S, Gelatt CDJ, Vecchi MP (1983). 
-"Optimization by simulated annealing." 
+"Optimization by Simulated Annealing." 
 Science 220 (May (4598)), 671-680.
 \url{http://www.ncbi.nlm.nih.gov/pubmed/17813860}
 

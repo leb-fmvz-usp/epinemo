@@ -5,7 +5,7 @@
 #' @param A an adjacency \code{\link{matrix}} with network information.
 #' @param directed \code{\link{logical}} whether to calculate the directed or undirected clustering coefficients.
 #' 
-#' @details This function calculates the Inward and Outward clustering coefficient (formulas) in directed networks. 
+#' @details This function calculates the inward and outward clustering coefficient in directed networks [1]. 
 #' 
 #' @return If directed = TRUE, a \code{\link{data.frame}}. The first column,
 #'         \code{$clustering.in}, is the inward clustering coefficient,
@@ -13,7 +13,7 @@
 #'         If directed = FALSE, a \code{\link{vector}}, with the undirected clustering coefficient.
 #' 
 #' @references 
-#' [1] CALDARELLI, G. Scale-Free Networks. Oxford: Oxford University Press, 2007.
+#' [1] Caldarelli G (2007). Scale-Free Networks. Oxford University Press, Oxford.
 #' 
 # \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export

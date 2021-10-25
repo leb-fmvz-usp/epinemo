@@ -18,7 +18,7 @@ If directed = TRUE, a \code{\link{data.frame}}. The first column,
         If directed = FALSE, a \code{\link{vector}}, with the undirected clustering coefficient.
 }
 \description{
-Function to calculate the clustering coefficient for all nodes in a network.
+A function to calculate the clustering coefficient for all nodes in a network.
 }
 \details{
 This function calculates the inward and outward clustering coefficient in directed networks [1].

@@ -20,7 +20,7 @@ and total degree (\code{k}).}
 \item{difference}{the difference between \code{kff} and \code{kmean}.}
 }
 \description{
-Calculate parameters related to the friendship paradox
+A function to calculate parameters related to the friendship paradox.
 }
 \details{
 This function calculates the following friendship paradox metrics: mean degree (\code{kmean}),

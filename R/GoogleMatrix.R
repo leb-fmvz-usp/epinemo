@@ -1,5 +1,5 @@
 #' This function creates the Google Matrix
-#' @description Calculates the PageRank for a network matrix
+#' @description A function to calculate the Google Matrix.
 #' @param A network adjacency \code{\link{matrix}} 
 #' @param alpha scaling parameter in PageRank model. It must be \code{\link{numeric}} between 0 and 1 inclusive. Default = 0.85.
 #' @return Google \code{\link{matrix}}.
@@ -9,7 +9,7 @@
 #' [1] Page L, Brin S, Motwani R, Winograd T (1999). "The PageRank 
 #' Citation Ranking: Bringing Order to the Web." Stanford Digital 
 #' Library Technologies Project 1999.
-#' \url{http://www.db.stanford.edu/~backrub/pageranksub.ps}
+#' \url{http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf}
 #' 
 #' [2] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
 #' of Search Engine Rankings." Princeton University Press, Princeton.

@@ -1,7 +1,7 @@
 #' @title Simulating the SIRS model in a network
 #' 
-#' @description Run the simulation of disease spread in a network
-#' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
+#' @description A function to run the simulation of disease spread in a network
+#' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model.
 #' 
 #' @param A An adjacency \code{\link{matrix}}
 #' @param pspread Probability of disease spread from an infected to a susceptible node

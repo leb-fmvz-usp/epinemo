@@ -1,6 +1,6 @@
 #' @title Clustering Coefficient
 #' 
-#' @description Function to calculate the clustering coefficient for all nodes in a network.
+#' @description A function to calculate the clustering coefficient for all nodes in a network.
 #' 
 #' @param A an adjacency \code{\link{matrix}} with network information.
 #' @param directed \code{\link{logical}} whether to calculate the directed or undirected clustering coefficients.

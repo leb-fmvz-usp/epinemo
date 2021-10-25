@@ -28,8 +28,8 @@ for the user to check if the 80-20 rule (Pareto principle)
 applies to the analyzed network.
 }
 \description{
-Make a graph of the percentage of more connected nodes
-as a function of the percentage of the total (weighted) indegree and outdegree
+Plots a graph of the percentage of more connected nodes
+as a function of the percentage of the total (weighted) indegree and outdegree.
 }
 \details{
 This function sorts in decreasing order 

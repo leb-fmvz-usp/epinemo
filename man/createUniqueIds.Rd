@@ -23,7 +23,7 @@ a \code{\link{list}} containing the following components:
 }
 }
 \description{
-Create unique identifiers in a network presented in edgelist form.
+A function to create unique identifiers in a network presented in edgelist form.
 }
 \details{
 This function creates two columns that can serve as unique identifiers. This IDs are in the range of 1:(number of nodes in the network). This is useful to create adjacency matrices when an unique identifier is composed of large numbers.

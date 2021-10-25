@@ -1,6 +1,6 @@
 #' @title Calculates contact chain
 #' 
-#' @description Function to calculate outgoing and ingoing contact
+#' @description A function to calculate outgoing and ingoing contact
 #'              chains.
 #' 
 #' @param Data \code{\link{data.frame}} with network information : node ID, origin

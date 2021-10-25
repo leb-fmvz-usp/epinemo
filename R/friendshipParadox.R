@@ -1,6 +1,6 @@
 #' @title Friendship paradox metrics
 #' 
-#' @description Calculate parameters related to the friendship paradox
+#' @description A function to calculate parameters related to the friendship paradox.
 #' 
 #' @param A An adjacency \code{\link[base]{matrix}}.
 #' 

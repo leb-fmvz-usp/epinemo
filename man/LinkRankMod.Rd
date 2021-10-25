@@ -17,7 +17,7 @@ LinkRankMod(L, pr, c)
 LinkRank Modularity value
 }
 \description{
-Computes the Link Rank Modularity (Qlr), as described by Kim et al. [1]
+Computes the LinkRank Modularity (Qlr), as described by Kim et al. [1]
 }
 \details{
 Complicated function... see the paper!

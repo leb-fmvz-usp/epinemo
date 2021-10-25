@@ -33,8 +33,8 @@ A list of
 \item{M_Sim_R}{a matrix of recovered nodes for each time step.}
 }
 \description{
-Run the simulation of disease spread in a network
-using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
+A function to run the simulation of disease spread in a network
+using the SIRS (Susceptible-Infected-Recovered-Susceptible) model.
 }
 \details{
 This function runs the simulation of disease spread in a network

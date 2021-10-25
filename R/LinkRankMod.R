@@ -1,5 +1,5 @@
 #' LinkRank Modularity
-#' @description Computes the Link Rank Modularity (Qlr), as described by Kim et al. [1]
+#' @description Computes the LinkRank Modularity (Qlr), as described by Kim et al. [1]
 #' @param L LinkRank Matrix. Output of \code{\link{LinkRank}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
 #' @param c partition vector

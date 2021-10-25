@@ -1,7 +1,7 @@
 #' @title Graph to check the 80-20 rule (Pareto principle)
 #' 
-#' @description Make a graph of the percentage of more connected nodes
-#' as a function of the percentage of the total (weighted) indegree and outdegree
+#' @description Plots a graph of the percentage of more connected nodes
+#' as a function of the percentage of the total (weighted) indegree and outdegree.
 #' 
 #' @param A An adjacency \code{\link[base]{matrix}}. 
 #' @param xlabel The text for the x-axis label.

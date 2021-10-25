@@ -1,8 +1,8 @@
 #' @title SIRS model in two networks with the same nodes
 #' 
-#' @description Run the simulation of disease spread in two networks
-#' with the same nodes
-#' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model
+#' @description A function to run the simulation of disease spread 
+#' in two networks with the same nodes
+#' using the SIRS (Susceptible-Infected-Recovered-Susceptible) model.
 #' 
 #' @param A1 The adjacency \code{\link{matrix}} of network 1
 #' @param A2 The adjacency \code{\link{matrix}} of network 2

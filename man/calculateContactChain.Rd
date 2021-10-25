@@ -32,7 +32,7 @@ continuous (\code{\link{FALSE}}) and indirect contacts between movements
         \code{$outgoing}, is the outgoing contact chain value.
 }
 \description{
-Function to calculate outgoing and ingoing contact
+A function to calculate outgoing and ingoing contact
              chains.
 }
 \details{

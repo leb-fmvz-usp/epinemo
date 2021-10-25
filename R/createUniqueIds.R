@@ -1,6 +1,6 @@
 #' Create Unique Identifiers
 #' 
-#' @description Create unique identifiers in a network presented in edgelist form.
+#' @description A function to create unique identifiers in a network presented in edgelist form.
 #' @param data Edgelist of a network, presented in \code{\link{data.frame}} format. Usually it is a data frame containing one row per animal movement, including information about origin and destination, number of animals, date of movement, etc.
 #' @param from \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the source node (origin) of each edge
 #' @param to \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the target node (destination) of each edge

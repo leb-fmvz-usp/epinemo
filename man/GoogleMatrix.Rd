@@ -15,7 +15,7 @@ GoogleMatrix(A, alpha = 0.85)
 Google \code{\link{matrix}}.
 }
 \description{
-Calculates the PageRank for a network matrix
+A function to calculate the Google Matrix.
 }
 \details{
 This function is very simple.
@@ -28,7 +28,7 @@ Google.matrix(A)
 [1] Page L, Brin S, Motwani R, Winograd T (1999). "The PageRank 
 Citation Ranking: Bringing Order to the Web." Stanford Digital 
 Library Technologies Project 1999.
-\url{http://www.db.stanford.edu/~backrub/pageranksub.ps}
+\url{http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf}
 
 [2] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
 of Search Engine Rankings." Princeton University Press, Princeton.

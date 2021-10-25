@@ -13,7 +13,7 @@ Rnhm(A)
 row-normalized hyperlink matrix
 }
 \description{
-This function creates a sparse row-normalized hyperlink matrix
+This function creates a sparse row-normalized hyperlink matrix.
 }
 \details{
 Complicated function... see the book!

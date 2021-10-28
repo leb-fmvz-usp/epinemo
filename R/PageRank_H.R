@@ -6,7 +6,8 @@
 #' @param pr0 starting vector at iteration 0 (a row vector). Usually set to rep(1/n,n).
 #' @param v personalization vector. sum(v) = 1.
 #' @return Numeric vector with nodes' PageRank
-#' @details This function uses the Power method.
+#' @details This function uses the power method to calculate
+#' the PageRank of a row normalized hyperlink matrix [1].
 #' 
 #' @references 
 #' [1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 

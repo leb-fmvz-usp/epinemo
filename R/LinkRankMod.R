@@ -1,10 +1,17 @@
 #' LinkRank Modularity
-#' @description Computes the LinkRank Modularity (Qlr), as described by Kim et al. [1]
+#' @description Computes the LinkRank Modularity (\emph{Qlr}), as described by Kim et al. [1]
 #' @param L LinkRank Matrix. Output of \code{\link{LinkRank}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
 #' @param c partition vector
 #' @return LinkRank Modularity value
-#' @details Complicated function... see the paper!
+#' @details The LinkRank Modularity (\emph{Qlr}) is a modified modularity
+#' for both directed and undirected networks, defined as [1]
+#' \deqn{Qlr = (fraction of time spent walking within communities by a random walker)
+#' - (expected value of this fraction).}
+#' According to this definition, "a community is no longer a group of nodes
+#' in which links are more densely located.
+#' Instead, a community is a group of nodes in which a random walker
+#' is more likely to stay" [1].
 #' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 

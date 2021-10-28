@@ -17,10 +17,17 @@ LinkRankMod(L, pr, c)
 LinkRank Modularity value
 }
 \description{
-Computes the LinkRank Modularity (Qlr), as described by Kim et al. [1]
+Computes the LinkRank Modularity (\emph{Qlr}), as described by Kim et al. [1]
 }
 \details{
-Complicated function... see the paper!
+The LinkRank Modularity (\emph{Qlr}) is a modified modularity
+for both directed and undirected networks, defined as [1]
+\deqn{Qlr = (fraction of time spent walking within communities by a random walker)
+- (expected value of this fraction).}
+According to this definition, "a community is no longer a group of nodes
+in which links are more densely located.
+Instead, a community is a group of nodes in which a random walker
+is more likely to stay" [1].
 }
 \examples{
 # Calculates LinkRank Modularity

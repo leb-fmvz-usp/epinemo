@@ -21,10 +21,11 @@ pageRank(A, alpha = 0.85, epsilon = 1e-08, pr0, v)
 Numeric vector with nodes' PageRank
 }
 \description{
-Calculates the PageRank for a network matrix
+Calculates the PageRank for a network matrix.
 }
 \details{
-This function uses the Power method.
+This function uses the power method to calculate the PageRank
+of a network matrix [1].
 }
 \examples{
 # Calculates PageRank

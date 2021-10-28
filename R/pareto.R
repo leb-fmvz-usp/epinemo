@@ -10,7 +10,7 @@
 #' @param legin The text for the legend of the outdegree.
 #' 
 #' @details This function sorts in decreasing order 
-#' the indegree and outdegree of the nodes of a netowrk.
+#' the indegree and outdegree of the nodes of a network.
 #' Then the function calculates the percentage of more connected nodes 
 #' and the corresponding percentage of the total indegree and outdegree.
 #' The indegree and outdegree can be weighted or not, 

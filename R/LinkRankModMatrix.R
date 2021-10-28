@@ -1,9 +1,12 @@
 #' LinkRank Modularity Matrix
-#' @description Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1]
+#' @description Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1].
 #' @param L LinkRank Matrix. Output of \code{\link{LinkRank}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
-#' @return LinkRank Modularity Matrix, where [i,j] is the contribution to LinkRank Modularity if "i" and "j" are assigned to the same community
-#' @details Complicated function... see the paper!
+#' @return LinkRank Modularity Matrix, where the element \emph{[i,j]} 
+#' is the contribution to LinkRank Modularity if nodes \emph{i} and \emph{j} are assigned to the same community
+#' @details This function generates a matrix with
+#' contributions to the LinkRank Modularity. 
+#' A more detailed description can be found in [1].
 #' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 

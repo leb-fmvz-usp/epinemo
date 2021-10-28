@@ -18,7 +18,7 @@ Google \code{\link{matrix}}.
 A function to calculate the Google Matrix.
 }
 \details{
-This function is very simple.
+This function calculates the Google Matrix [2].
 }
 \examples{
 # Calculates Google Matrix

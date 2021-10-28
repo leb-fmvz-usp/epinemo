@@ -24,7 +24,8 @@ Numeric vector with nodes' PageRank
 Calculates the PageRank for an n-by-n Markov Matrix (Row Normalized Hyperlink Matrix).
 }
 \details{
-This function uses the Power method.
+This function uses the power method to calculate
+the PageRank of a row normalized hyperlink matrix [1].
 }
 \examples{
 # Calculates PageRank

@@ -1,9 +1,15 @@
 #' LinkRank Matrix
-#' @description Calculates the LinkRank Matrix, according to Kim et al. [1]
+#' @description Calculates the LinkRank Matrix, according to Kim et al. [1].
 #' @param G Google Matrix. Output of \code{\link{GoogleMatrix}} function
 #' @param pr PageRank vector. Output of \code{\link{PageRank}} function
 #' @return LinkRank Matrix
-#' @details Complicated function... see the paper!
+#' @details "Similar to the definition of PageRank, LinkRank
+#' of a particular link should be equal to the probability that
+#' a random walker follows the link from node \emph{i} to node \emph{j}" [1].
+#' LinkRank from node \emph{i} to node \emph{j} can be defined as
+#' \eqn{L_{ij} = \pi_{i} * G_{ij}}, where  
+#' \eqn{\pi_{i}} is the \emph{i}th element of the PageRank vector,
+#' and \eqn{G_{ij}} is the element of the Google Matrix.
 #' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 

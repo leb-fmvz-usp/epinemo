@@ -3,7 +3,7 @@
 #' @param A network adjacency \code{\link{matrix}} 
 #' @param alpha scaling parameter in PageRank model. It must be \code{\link{numeric}} between 0 and 1 inclusive. Default = 0.85.
 #' @return Google \code{\link{matrix}}.
-#' @details This function is very simple.
+#' @details This function calculates the Google Matrix [2].
 #' 
 #' @references 
 #' [1] Page L, Brin S, Motwani R, Winograd T (1999). "The PageRank 

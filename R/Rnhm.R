@@ -2,7 +2,8 @@
 #' @description This function creates a sparse row-normalized hyperlink matrix.
 #' @param A network adjacency \code{\link{matrix}} 
 #' @return row-normalized hyperlink matrix
-#' @details Complicated function... see the book!
+#' @details This function creates a sparse row-normalized hyperlink matrix, 
+#' defined in more detail in [1].
 #' 
 #' @references
 #' [1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 

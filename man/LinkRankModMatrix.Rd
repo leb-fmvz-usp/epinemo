@@ -12,13 +12,16 @@ LinkRankModMatrix(L, pr)
 \item{pr}{PageRank vector. Output of \code{\link{PageRank}} function}
 }
 \value{
-LinkRank Modularity Matrix, where [i,j] is the contribution to LinkRank Modularity if "i" and "j" are assigned to the same community
+LinkRank Modularity Matrix, where the element \emph{[i,j]} 
+is the contribution to LinkRank Modularity if nodes \emph{i} and \emph{j} are assigned to the same community
 }
 \description{
-Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1]
+Generates a matrix with contributions to LinkRank Modularity, according to Kim et al. [1].
 }
 \details{
-Complicated function... see the paper!
+This function generates a matrix with
+contributions to the LinkRank Modularity. 
+A more detailed description can be found in [1].
 }
 \examples{
 # Generate LinkRank Modularity Matrix

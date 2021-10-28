@@ -1,8 +1,8 @@
 #' LinkRank Modularity Optimization
-#' @description Computes the optimal partition of a network, based on LinkRank Modularity
+#' @description Computes the optimal partition of a network, based on LinkRank Modularity.
 #' @param qlrmM LinkRank Modularirty Matrix. Output of \code{\link{LinkRankModMatrix}} function
 #' @param A Alternatively, the network adjacency matrix can be provided.
-#' @param c Initial parition vector. Default to c = 1:n
+#' @param c Initial partition vector. Default to c = 1:n
 #' @param Tc Initial temperature
 #' @param minTc Minimal temperature
 #' @param cool System cooling factor
@@ -12,9 +12,12 @@
 #' @param plots Logical. If TRUE plots the progres of the algorithm. Requires network adjacency matrix and "statnet" package. Default to FALSE
 #' @param location Directory to save the plots described above.
 #' @return Numeric vector, with the optimal partition found.
-#' @details Complicated function... see the paper! 
-#' Uses Simulated Annealing (see reference) 
-#' Only test simple movements between groups, doesn't test group movements.
+#' @details This function computes the optimal partition of a network, 
+#' based on LinkRank Modularity [1]. 
+#' The simulated annealing algorithm [2] is used during
+#' the community identifying process. 
+#' Only simple movements between groups are tested.
+#' It does not test group movements.
 #' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 

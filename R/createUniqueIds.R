@@ -4,7 +4,7 @@
 #' @param data Edgelist of a network, presented in \code{\link{data.frame}} format. Usually it is a data frame containing one row per animal movement, including information about origin and destination, number of animals, date of movement, etc.
 #' @param from \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the source node (origin) of each edge
 #' @param to \code{\link{character}} \code{\link{vector}}, indicate the column(s) used to characterize the target node (destination) of each edge
-#' @details This function creates two columns that can serve as unique identifiers. This IDs are in the range of 1:(number of nodes in the network). This is useful to create adjacency matrices when an unique identifier is composed of large numbers.
+#' @details This function creates two columns that can serve as unique identifiers. These IDs are in the range of 1:(number of nodes in the network). This is useful to create adjacency matrices when an unique identifier is composed of large numbers.
 #' @return a \code{\link{list}} containing the following components: 
 #' 
 #' \describe{

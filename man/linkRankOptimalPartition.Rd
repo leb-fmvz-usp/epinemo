@@ -21,7 +21,7 @@ linkRankOptimalPartition(
 \arguments{
 \item{A}{Alternatively, the network adjacency matrix can be provided.}
 
-\item{c}{Initial parition vector. Default to c = 1:n}
+\item{c}{Initial partition vector. Default to c = 1:n}
 
 \item{Tc}{Initial temperature}
 
@@ -45,12 +45,15 @@ linkRankOptimalPartition(
 Numeric vector, with the optimal partition found.
 }
 \description{
-Computes the optimal partition of a network, based on LinkRank Modularity
+Computes the optimal partition of a network, based on LinkRank Modularity.
 }
 \details{
-Complicated function... see the paper! 
-Uses Simulated Annealing (see reference) 
-Only test simple movements between groups, doesn't test group movements.
+This function computes the optimal partition of a network, 
+based on LinkRank Modularity [1]. 
+The simulated annealing algorithm [2] is used during
+the community identifying process. 
+Only simple movements between groups are tested.
+It does not test group movements.
 }
 \examples{
 # Calculates the optimal partition of a given network

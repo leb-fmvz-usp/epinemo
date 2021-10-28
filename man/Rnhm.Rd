@@ -16,7 +16,8 @@ row-normalized hyperlink matrix
 This function creates a sparse row-normalized hyperlink matrix.
 }
 \details{
-Complicated function... see the book!
+This function creates a sparse row-normalized hyperlink matrix, 
+defined in more detail in [1].
 }
 \examples{
 # Calculates rnhm

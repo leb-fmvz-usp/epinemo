@@ -24,7 +24,10 @@ A function to calculate the clustering coefficient for all nodes in a network.
 This function calculates the inward and outward clustering coefficient in directed networks [1].
 }
 \examples{
-# Loading data from....
+# Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+# Remove loops
+A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+diag(A) <- 0
 
 # call contact chain function
 cc <- clusteringCoefficient(A)

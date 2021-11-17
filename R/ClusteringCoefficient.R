@@ -18,7 +18,10 @@
 # \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
-#' # Loading data from....
+#' # Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+#' diag(A) <- 0
 #' 
 #' # call contact chain function
 #' cc <- clusteringCoefficient(A)

@@ -21,8 +21,13 @@ A function to calculate the Google Matrix.
 This function calculates the Google Matrix [2].
 }
 \examples{
+# Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+# Remove loops
+A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+diag(A) <- 0
+
 # Calculates Google Matrix
-Google.matrix(A)
+GoogleMatrix(A)
 }
 \references{
 [1] Page L, Brin S, Motwani R, Winograd T (1999). "The PageRank 

@@ -19,10 +19,26 @@
 #' Physical Review E 81, 016103.
 #' \doi{10.1103/PhysRevE.81.016103}
 #' 
-#' \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
-#' # Calculates LinkRank Modularity
+#' # Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones
+#' # Remove loops
+#' A <- matrix(rbinom(100 * 100, 1, 0.2), ncol = 100, nrow = 100)
+#' diag(A) <- 0
+#' 
+#' # Calculate Google Matrix
+#' G <- GoogleMatrix(A)
+#' 
+#' # Calculate PageRank vector
+#' pr <- pageRank(A)
+#' 
+#' # Calculate LinkRank Matrix
+#' L <- LinkRank(G,pr)
+#' 
+#' # Assign a partition vector
+#' c <- 1:100
+#' 
+#' # Calculate LinkRank Modularity
 #' LinkRankMod(L,pr,c)
 
 LinkRankMod <- function(L,pr,c)

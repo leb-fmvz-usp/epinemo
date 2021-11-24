@@ -59,7 +59,6 @@
 #'     Preventive Veterinary Medicine, 99 (2-4), 78-90. 
 #'     \doi{10.1016/j.prevetmed.2010.12.009}
 #' 
-# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Loading data from....

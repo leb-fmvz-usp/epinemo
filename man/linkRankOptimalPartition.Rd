@@ -57,6 +57,7 @@ It does not test group movements.
 }
 \examples{
 # An arbitrary adjacency matrix for a network with 16 nodes
+# based on an example from Ref.[1]
 
 adj <- structure(c(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
                  1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,

@@ -15,7 +15,6 @@
 #' @references 
 #' [1] Caldarelli G (2007). Scale-Free Networks. Oxford University Press, Oxford.
 #' 
-# \url{http://github.com/leb-fmvz-usp.github/epinemo}
 #' @export
 #' @examples 
 #' # Generate an arbitrary 100 by 100 adjacency matrix with zeros and ones

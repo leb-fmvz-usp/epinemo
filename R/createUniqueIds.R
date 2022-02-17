@@ -15,14 +15,17 @@
 #' 
 #' @export
 #' @examples 
-#' # New id's
-#' new.database <- createUniqueIds(database)
+#' 
+#' # Creating a data frame with movements from a source node (origin)
+#' # to a target node (destination) with identification codes between 1000 and 1050
+#' origin <- sample.int(n = 50, size = 1000, replace = TRUE) + 1000
+#' destination <- sample.int(n = 50, size = 1000, replace = TRUE) + 1000
+#' database <- data.frame(origin = origin, destination = destination)
+#'
+#' # Creating new IDs starting from 1
+#' new.database <- createUniqueIds(database, from = 'origin', to = 'destination')
 #' head(new.database$correspondence)
 #' head(new.database$movements)
-#' 
-#' library(Matrix)
-#' number.of.nodes <- max(new.database$movements$From, new.database$movements$To)
-#' adjacency.matrix <- sparsematrix(i = new.database$movements$From, j=new.database$movements$To, dims = rep(number.of.nodes, 2))
 #' 
 createUniqueIds <- function(data, from, to)
 {

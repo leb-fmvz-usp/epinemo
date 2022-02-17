@@ -29,13 +29,16 @@ A function to create unique identifiers in a network presented in edgelist form.
 This function creates two columns that can serve as unique identifiers. These IDs are in the range of 1:(number of nodes in the network). This is useful to create adjacency matrices when an unique identifier is composed of large numbers.
 }
 \examples{
-# New id's
-new.database <- createUniqueIds(database)
+
+# Creating a data frame with movements from a source node (origin)
+# to a target node (destination) with identification codes between 1000 and 1050
+origin <- sample.int(n = 50, size = 1000, replace = TRUE) + 1000
+destination <- sample.int(n = 50, size = 1000, replace = TRUE) + 1000
+database <- data.frame(origin = origin, destination = destination)
+
+# Creating new IDs starting from 1
+new.database <- createUniqueIds(database, from = 'origin', to = 'destination')
 head(new.database$correspondence)
 head(new.database$movements)
-
-library(Matrix)
-number.of.nodes <- max(new.database$movements$From, new.database$movements$To)
-adjacency.matrix <- sparsematrix(i = new.database$movements$From, j=new.database$movements$To, dims = rep(number.of.nodes, 2))
 
 }

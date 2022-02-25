@@ -40,10 +40,16 @@ This is a function that calculates the contact chain of a dynamic
          network.
 }
 \examples{
-# Loading data from....
+# Creating a data frame with movements from a source node (origin)
+# to a target node (destination) with identification codes between 1000 and 1050
+# in randomly selected dates (day)
+origin <- sample.int(n = 50, size = 300, replace = TRUE) + 1000
+destination <- sample.int(n = 50, size = 300, replace = TRUE) + 1000
+day <- sample(seq(as.Date("2019/04/01"), as.Date("2019/06/30"), by = "day"), size = 300, replace = TRUE)
+database <- data.frame(origin = origin, destination = destination, day = day)
 
-# call contact chain function
-chain <- calculateContactChain(Data, from, to, Time)
+# Calling the contact chain function
+chain <- calculateContactChain(Data = database, from = 'origin', to = 'destination', Time = 'day', simultaneous=T)
                                                    
 }
 \references{

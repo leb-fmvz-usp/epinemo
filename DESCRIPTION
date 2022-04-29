@@ -21,7 +21,7 @@ Authors@R: c(person(given='Jose Henrique', family='H Grisi Filho',
 Author: Jose H. H. Grisi-Filho [aut, cre],
     Marcos Amaku [aut, cre],
     Raul Ossada [aut],
-    Fernando Ferreira [ctb],
+    Fernando Ferreira [aut],
     Fernando S. Marques [aut]
 Maintainer: Marcos Amaku <amaku@usp.br>,
     Jose H. H. Grisi-Filho <grisi@vps.fmvz.usp.br>

@@ -1,7 +1,7 @@
 epinemo
 ====
   
-  `epinemo` is a package for [R](http://www.r-project.org/), a free software environment for statistical computing and graphics. 
+  `epinemo` is a package for [R](https://www.r-project.org/), a free software environment for statistical computing and graphics. 
 
 
 `epinemo` stands for **EPI**demiological **NE**twork **MO**dels and is an initiative to guide and automate quantitative analysis in networks.

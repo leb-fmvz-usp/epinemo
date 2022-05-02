@@ -74,7 +74,7 @@ ingoing.infection.chain <- CalculateInfectionChain(Data, from, to, Time,
 [3] C Dube, C Ribble, D Kelton, et al. "A review of network analysis terminology
     and its application to foot-and-mouth disease modelling and policy development."
     In: Transboundary and emerging diseases 56.3 (Apr. 2009), pp. 73-85.
-[4] Jenny Frossling, Anna Ohlson, Camilla Bj ̈orkman, et al. "Application of
+[4] Jenny Frossling, Anna Ohlson, Camilla Bjorkman, et al. "Application of
     network analysis parameters in risk-based surveillance - Examples based
     on cattle trade data and bovine infections in Sweden." In:  Preventive
     veterinary medicine 105.3 (July 2012), pp. 202-208. doi: 10.1016/j.prevetmed.2011.12.011.
@@ -82,6 +82,4 @@ ingoing.infection.chain <- CalculateInfectionChain(Data, from, to, Time,
     "Network analysis of cattle and pig movements in Sweden: measures relevant
     for disease control and risk based surveillance." In: Preventive veterinary
     medicine 99.2-4 (2011), pp. 78-90. doi: 10.1016/j.prevetmed.2010.12.009.
-
-\url{http://github.com/leb-fmvz-usp.github/epinemo}
 }

@@ -28,7 +28,7 @@
 #' [2] Kirkpatrick S, Gelatt CDJ, Vecchi MP (1983). 
 #' "Optimization by Simulated Annealing." 
 #' Science 220 (May (4598)), 671-680.
-#' \url{http://www.ncbi.nlm.nih.gov/pubmed/17813860}
+#' \url{https://pubmed.ncbi.nlm.nih.gov/17813860/}
 #' 
 #' @export
 #' @examples 

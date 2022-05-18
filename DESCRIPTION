@@ -1,14 +1,16 @@
 Package: epinemo
 Type: Package
-Title: Epidemiologic Network Models
+Title: An R Package for EPIdemiological NEtwork MOdels
 Depends:
-    R (>= 3.0.2),
-    foreach
+    R (>= 3.0.2)
 Imports:
     Matrix,
+    foreach,
     doSNOW,
     ggplot2
-Description: Provides functions for
+Description: Provides functions for network analysis, simulation 
+    of disease spread in networks, conversion of an animal movement
+    records database into a network (matrix form), and community detection.
 License: GPL (>= 2)
 LazyLoad: yes
 URL: https://github.com/leb-fmvz-usp/epinemo

@@ -29,6 +29,8 @@
 #'         \code{$ingoing}, is the ingoing contact chain value, and
 #'         \code{$outgoing}, is the outgoing contact chain value.
 #' 
+#' @importFrom methods as
+#' 
 #' @references 
 #' [1] Buttner K, Krieter J, Traulsen I (2015). "Characterization of Contact Structures
 #'     for the Spread of Infectious Diseases in a Pork Supply Chain in Northern
@@ -74,7 +76,7 @@
 #'                                                    
 calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
 {
-  require(Matrix)
+  #require(Matrix)
   #check
   stopifnot(class(Data[,Time]) == "Date")
   #Create new IDs
@@ -87,8 +89,8 @@ calculateContactChain <- function (Data, from, to, Time, simultaneous=T)
   mov.list <- split(Data$movements, Data$movements[, Time])
   
   #Sparse Matrix for each Date
-  net.array <- lapply(mov.list, function(x) sparseMatrix(i = x[, 'From'], j = x[, 'To'], dims= dimensions ))
-  matrix.ccc <- Matrix(0, nc=dimensions[1], nr=dimensions[2], sparse=T)
+  net.array <- lapply(mov.list, function(x) Matrix::sparseMatrix(i = x[, 'From'], j = x[, 'To'], dims= dimensions ))
+  matrix.ccc <- Matrix::Matrix(0, ncol = dimensions[1], nrow = dimensions[2], sparse = T)
   matrix.ccc <- as(matrix.ccc, "dgCMatrix")
   if (simultaneous)
   {

@@ -15,7 +15,7 @@ License: GPL (>= 2)
 LazyLoad: yes
 URL: https://github.com/leb-fmvz-usp/epinemo
 Authors@R: c(person(given='Jose Henrique', family='H Grisi Filho',
-    email='grisi@vps.fmvz.usp.br', role=c("aut", "cre")),
+    email='grisi@vps.fmvz.usp.br', role=c("aut")),
     person(given='Marcos', family='Amaku', email='amaku@usp.br', role=c("aut", "cre")),
     person(given='Raul', family='Ossada', email='raul@vps.fmvz.usp.br', role=c("aut")),
     person(given='Fernando',family='Ferreira',email='fernando@vps.fmvz.usp.br', role="ctb"),
@@ -28,4 +28,4 @@ Author: Jose H. H. Grisi-Filho [aut, cre],
 Maintainer: Marcos Amaku <amaku@usp.br>
 Version: 0.0.6
 Date: 2022-05-02
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1

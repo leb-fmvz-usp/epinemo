@@ -19,6 +19,11 @@
 #' Only simple movements between groups are tested.
 #' It does not test group movements.
 #' 
+#' @importFrom grDevices colorRampPalette
+#' @importFrom grDevices palette
+#' @importFrom grDevices png
+#' @importFrom grDevices dev.off
+#' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 
 #' "Finding Communities in Directed Networks." 

@@ -19,6 +19,7 @@
 #' \item{variance}{the variance of degree distribution.}
 #' \item{difference}{the difference between \code{kff} and \code{kmean}.}
 #'
+#' @importFrom stats var
 #' 
 #' @references 
 #' [1] Feld SL (1991). 

@@ -9,6 +9,8 @@
 #' @details This function uses the power method to calculate
 #' the PageRank of a row normalized hyperlink matrix [1].
 #' 
+#' @importFrom stats dist
+#' 
 #' @references 
 #' [1] Langville AN, Meyer CD (2006). "Google's PageRank and Beyond: The Science 
 #' of Search Engine Rankings." Princeton University Press, Princeton.

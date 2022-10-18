@@ -23,6 +23,7 @@
 #' @importFrom grDevices palette
 #' @importFrom grDevices png
 #' @importFrom grDevices dev.off
+#' @importFrom stats runif
 #' 
 #' @references 
 #' [1] Kim Y, Son SW, Jeong H (2010). 

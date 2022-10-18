@@ -35,6 +35,8 @@
 #' \item{M_Sim_I}{a matrix of infected nodes for each time step.} 
 #' \item{M_Sim_R}{a matrix of recovered nodes for each time step.}
 #' 
+#' @importFrom stats runif
+#' 
 #' @references 
 #' [1] Ossada R, Grisi-Filho JHH, Ferreira F, Amaku M (2013). 
 #' "Modeling the Dynamics of Infectious

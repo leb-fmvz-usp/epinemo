@@ -1,6 +1,6 @@
 #' LinkRank Modularity Optimization
 #' @description Computes the optimal partition of a network, based on LinkRank Modularity.
-#' @param qlrmM LinkRank Modularirty Matrix. Output of \code{\link{LinkRankModMatrix}} function
+#' @param qlrM LinkRank Modularirty Matrix. Output of \code{\link{LinkRankModMatrix}} function
 #' @param A Alternatively, the network adjacency matrix can be provided.
 #' @param c Initial partition vector. Default to c = 1:n
 #' @param Tc Initial temperature

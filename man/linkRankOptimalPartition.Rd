@@ -19,6 +19,8 @@ linkRankOptimalPartition(
 )
 }
 \arguments{
+\item{qlrM}{LinkRank Modularirty Matrix. Output of \code{\link{LinkRankModMatrix}} function}
+
 \item{A}{Alternatively, the network adjacency matrix can be provided.}
 
 \item{c}{Initial partition vector. Default to c = 1:n}
@@ -38,8 +40,6 @@ linkRankOptimalPartition(
 \item{plots}{Logical. If TRUE plots the progres of the algorithm. Requires network adjacency matrix and "statnet" package. Default to FALSE}
 
 \item{location}{Directory to save the plots described above.}
-
-\item{qlrmM}{LinkRank Modularirty Matrix. Output of \code{\link{LinkRankModMatrix}} function}
 }
 \value{
 Numeric vector, with the optimal partition found.

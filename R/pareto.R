@@ -7,7 +7,7 @@
 #' @param xlabel The text for the x-axis label.
 #' @param ylabel The text for the y-axis label.
 #' @param legin The text for the legend of the indegree.
-#' @param legin The text for the legend of the outdegree.
+#' @param legout The text for the legend of the outdegree.
 #' 
 #' @details This function sorts in decreasing order 
 #' the indegree and outdegree of the nodes of a network.

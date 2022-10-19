@@ -19,7 +19,9 @@ pareto(
 
 \item{ylabel}{The text for the y-axis label.}
 
-\item{legin}{The text for the legend of the outdegree.}
+\item{legin}{The text for the legend of the indegree.}
+
+\item{legout}{The text for the legend of the outdegree.}
 }
 \value{
 A graph of the percentage of more connected nodes

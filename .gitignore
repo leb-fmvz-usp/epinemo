@@ -11,4 +11,4 @@ epinemo.Rproj
 epinemoGithub.Rproj
 
 ##### fernandosm files ######
-calculate_infection_chain_origin.R
+calculate_infection_chain.R

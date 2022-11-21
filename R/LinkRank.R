@@ -1,7 +1,7 @@
 #' LinkRank Matrix
 #' @description Calculates the LinkRank Matrix, according to Kim et al. [1].
 #' @param G Google Matrix. Output of \code{\link{GoogleMatrix}} function
-#' @param pr PageRank vector. Output of \code{\link{PageRank}} function
+#' @param pr PageRank vector. Output of \code{\link{pageRank}} function
 #' @return LinkRank Matrix
 #' @details "Similar to the definition of PageRank, LinkRank
 #' of a particular link should be equal to the probability that

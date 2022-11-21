@@ -9,7 +9,7 @@ LinkRank(G, pr)
 \arguments{
 \item{G}{Google Matrix. Output of \code{\link{GoogleMatrix}} function}
 
-\item{pr}{PageRank vector. Output of \code{\link{PageRank}} function}
+\item{pr}{PageRank vector. Output of \code{\link{pageRank}} function}
 }
 \value{
 LinkRank Matrix

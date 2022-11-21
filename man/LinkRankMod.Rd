@@ -9,7 +9,7 @@ LinkRankMod(L, pr, c)
 \arguments{
 \item{L}{LinkRank Matrix. Output of \code{\link{LinkRank}} function}
 
-\item{pr}{PageRank vector. Output of \code{\link{PageRank}} function}
+\item{pr}{PageRank vector. Output of \code{\link{pageRank}} function}
 
 \item{c}{partition vector}
 }

@@ -9,7 +9,7 @@ LinkRankModMatrix(L, pr)
 \arguments{
 \item{L}{LinkRank Matrix. Output of \code{\link{LinkRank}} function}
 
-\item{pr}{PageRank vector. Output of \code{\link{PageRank}} function}
+\item{pr}{PageRank vector. Output of \code{\link{pageRank}} function}
 }
 \value{
 LinkRank Modularity Matrix, where the element \emph{[i,j]} 

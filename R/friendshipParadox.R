@@ -47,8 +47,6 @@
 #' 
 #' @export
 #' @examples 
-#' require(Matrix)
-#' 
 #' # Generate an arbitrary 10 by 10 adjacency matrix with zeros and ones
 #' # Remove loops
 #' A <- matrix(rbinom(10 * 10, 1, 0.2), ncol = 10, nrow = 10)
